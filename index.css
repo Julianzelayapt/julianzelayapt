@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ios-bg: #ffffff;
+  --ios-text: #1a1a1c;
+  --ios-gray: #86868b;
+  --ios-blur-bg: rgba(255, 255, 255, 0.75);
+  --ios-blur-bg-strong: rgba(255, 255, 255, 0.8);
+  --card-bg: #ffffff;
+  --card-border: rgba(0, 0, 0, 0.03);
+  --section-bg-alt: #f8faf9;
+}
+
+.dark {
+  --ios-bg: #000000;
+  --ios-text: #f5f5f7;
+  --ios-gray: #a1a1a6;
+  --ios-blur-bg: rgba(26, 26, 26, 0.7);
+  --ios-blur-bg-strong: rgba(30, 30, 30, 0.85);
+  --card-bg: #1c1c1e;
+  --card-border: rgba(255, 255, 255, 0.05);
+  --section-bg-alt: #121212;
+}
+
+@layer base {
+  body {
+    @apply bg-[var(--ios-bg)] text-[var(--ios-text)] antialiased overflow-x-hidden transition-colors duration-500;
+  }
+}
+
+@layer utilities {
+  .ios-blur {
+    backdrop-filter: blur(20px);
+    background-color: var(--ios-blur-bg);
+  }
+
+  .ios-blur-strong {
+    backdrop-filter: blur(40px);
+    background-color: var(--ios-blur-bg-strong);
+  }
+
+  .text-shadow-strong {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3), 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .text-shadow-white {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.9), 0 0 20px rgba(255, 255, 255, 0.7);
+  }
+
+  @layer utilities {
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  }
+
+  .ios-shadow {
+    box-shadow:
+      0 4px 6px -1px rgba(0, 0, 0, 0.01),
+      0 10px 15px -3px rgba(0, 0, 0, 0.02),
+      0 20px 25px -5px rgba(0, 0, 0, 0.02);
+  }
+
+  .ios-shadow-hover {
+    box-shadow:
+      0 10px 15px -3px rgba(0, 0, 0, 0.03),
+      0 25px 30px -5px rgba(0, 0, 0, 0.04);
+  }
+
+  /* Animación de desplazamiento izquierda a derecha */
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-40px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .animate-slide {
+    animation: slideInLeft 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  /* Zoom en hover */
+  .hover-zoom {
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .hover-zoom:hover {
+    transform: scale(1.02);
+  }
+
+  .delay-1 {
+    animation-delay: 0.1s;
+  }
+
+  .delay-2 {
+    animation-delay: 0.2s;
+  }
+
+  .delay-3 {
+    animation-delay: 0.3s;
+  }
+}
