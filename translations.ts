@@ -54,7 +54,7 @@ export const translations = {
     modal_selected: "Has seleccionado",
     modal_instruction: "Selecciona tu método de pago preferido para continuar.",
     t1_tra: "6 meses de recomposicion corporal",
-    t1_quo: '"Entrenar con Juli me cambió la cabeza. Antes iba al gimnasio por ir; con él aprendí lo que es entrenar de verdad. Mi cuerpo cambió por completo, me siento mil veces más fuerte y aprendí a comer sin restricciones. Si querés resultados reales, es con Juli."',
+    t1_quo: '"Entrenar con Juli me cambió la cabeza: aprendí lo que es entrenar de verdad, transformé mi cuerpo, me siento mucho más fuerte y aprendí a comer sin restricciones. Si querés resultados, es con Juli."',
     t2_tra: "4 meses de cambio",
     t2_quo: '"Llegué buscando orden y terminé encontrando un sistema. Aprendí a entrenar pesado y a comer para ver resultados, no solo para cumplir. Pasé de estar estancado a ver un cambio real en mi físico y en mi fuerza. Si buscás resultados sin vueltas, es por acá."',
     t3_tra: "4 meses de hipertrofia y deficit",
