@@ -3,9 +3,9 @@ import { motion } from 'framer-motion';
 
 const KnowledgeSection: React.FC<{ t: any }> = ({ t }) => {
   const images = [
-    "https://res.cloudinary.com/deb7eunq3/image/upload/v1771041444/juli_before_fatl4i.webp",
-    "https://res.cloudinary.com/deb7eunq3/image/upload/v1771037819/recent_uew5ts.webp",
-    "https://res.cloudinary.com/deb7eunq3/image/upload/v1771037615/486052a3-024d-4525-aa20-906a489a4aab_a6b6hj.webp"
+    "https://res.cloudinary.com/deb7eunq3/image/upload/f_auto,q_auto/v1771041444/juli_before_fatl4i.webp",
+    "https://res.cloudinary.com/deb7eunq3/image/upload/f_auto,q_auto/v1771037819/recent_uew5ts.webp",
+    "https://res.cloudinary.com/deb7eunq3/image/upload/f_auto,q_auto/v1771037615/486052a3-024d-4525-aa20-906a489a4aab_a6b6hj.webp"
   ];
 
   const items = [
@@ -57,6 +57,7 @@ const KnowledgeSection: React.FC<{ t: any }> = ({ t }) => {
                   src={images[idx]}
                   className="w-full h-full object-cover transition-all duration-700 contrast-105 group-hover:scale-110"
                   alt={item.title}
+                  loading="lazy"
                 />
               </div>
               <div className="px-4">
@@ -73,3 +74,4 @@ const KnowledgeSection: React.FC<{ t: any }> = ({ t }) => {
 };
 
 export default KnowledgeSection;
+
