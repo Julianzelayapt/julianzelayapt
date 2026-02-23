@@ -43,9 +43,9 @@ const Navbar: React.FC<NavbarProps> = ({ lang, setLang, t, isDarkMode, setIsDark
             <div className="flex items-center gap-3 cursor-pointer group z-50 relative" onClick={() => scrollTo('hero')}>
               <div className="w-10 h-10 flex-shrink-0 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <img
-                  src="/logo.png"
+                  src="/icon.png"
                   alt="Julian Zelaya PT"
-                  className={`w-10 h-10 object-contain transition-all duration-300 ${isDarkMode ? 'invert' : ''}`}
+                  className="w-10 h-10 object-contain"
                 />
               </div>
               <span className="font-bold tracking-tight text-[var(--ios-text)] uppercase text-[12px]">JULIAN ZELAYA PT</span>
@@ -101,11 +101,6 @@ const Navbar: React.FC<NavbarProps> = ({ lang, setLang, t, isDarkMode, setIsDark
               <button onClick={() => scrollTo('knowledge')} className="text-3xl font-black text-[var(--ios-text)] uppercase">{t.nav_method}</button>
               <button onClick={() => scrollTo('coaching')} className="text-3xl font-black text-[var(--ios-text)] uppercase">{t.nav_coaching}</button>
               <button onClick={() => scrollTo('plans')} className="text-3xl font-black text-[var(--ios-text)] uppercase">{t.nav_plans}</button>
-              <div className="flex gap-4 justify-center">
-                {['es', 'en', 'it'].map(l => (
-                  <button key={l} onClick={() => { setLang(l as any); setIsOpen(false); }} className={`w-12 h-12 rounded-full flex items-center justify-center font-black ${lang === l ? 'bg-kaki-600 text-white' : 'border border-[var(--card-border)] text-[var(--ios-text)]'}`}>{l}</button>
-                ))}
-              </div>
             </div>
           </motion.div>
         )}
