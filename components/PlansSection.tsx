@@ -21,7 +21,7 @@ const PlanCard: React.FC<{ plan: Plan; t: any; index: number; onSelect: (plan: P
   >
     {/* Background Image Overlay */}
     <div className="absolute inset-0 z-0">
-      <img src={plan.image} alt={t[plan.nameKey]} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+      <img src={plan.image} alt={t[plan.nameKey]} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
       <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
     </div>
 
@@ -52,21 +52,21 @@ const PlansSection: React.FC<{ t: any }> = ({ t }) => {
       descKey: "desc_ppl",
       link: "https://www.paypal.com/ncp/payment/M6YAGQUPCY2PA",
       mpLink: "https://mpago.la/1ApBxuh",
-      image: "https://res.cloudinary.com/deb7eunq3/image/upload/v1769451981/pplxul_shaubl.webp"
+      image: "https://res.cloudinary.com/deb7eunq3/image/upload/f_auto,q_auto/v1769451981/pplxul_shaubl.webp"
     },
     {
       nameKey: "plan_fullbody",
       descKey: "desc_fullbody",
       link: "https://www.paypal.com/ncp/payment/M6YAGQUPCY2PA",
       mpLink: "https://mpago.la/1DMb5Eg",
-      image: "https://res.cloudinary.com/deb7eunq3/image/upload/v1769451980/full_body_gfbxzm.webp"
+      image: "https://res.cloudinary.com/deb7eunq3/image/upload/f_auto,q_auto/v1769451980/full_body_gfbxzm.webp"
     },
     {
       nameKey: "plan_ul",
       descKey: "desc_ul",
       link: "https://www.paypal.com/ncp/payment/BFTQR6PV7L7XQ",
       mpLink: "https://mpago.la/31khfXn",
-      image: "https://res.cloudinary.com/deb7eunq3/image/upload/v1769451980/upper_lower_d17ult.webp"
+      image: "https://res.cloudinary.com/deb7eunq3/image/upload/f_auto,q_auto/v1769451980/upper_lower_d17ult.webp"
     }
   ];
 
@@ -76,14 +76,14 @@ const PlansSection: React.FC<{ t: any }> = ({ t }) => {
       descKey: "desc_grow",
       link: "https://www.paypal.com/ncp/payment/XGVFNANY8S8T6",
       mpLink: "https://mpago.la/2BtQ6E6",
-      image: "https://res.cloudinary.com/deb7eunq3/image/upload/v1769451980/grow_e_glow_ypkbzi.webp"
+      image: "https://res.cloudinary.com/deb7eunq3/image/upload/f_auto,q_auto/v1769451980/grow_e_glow_ypkbzi.webp"
     },
     {
       nameKey: "plan_fullbody",
       descKey: "desc_fullbody",
       link: "https://www.paypal.com/ncp/payment/8HQQDXRDUTZYN",
       mpLink: "https://mpago.la/1EDh3kB",
-      image: "https://res.cloudinary.com/deb7eunq3/image/upload/v1769451979/full_body_gymgirl_diimqx.webp"
+      image: "https://res.cloudinary.com/deb7eunq3/image/upload/f_auto,q_auto/v1769451979/full_body_gymgirl_diimqx.webp"
     }
   ];
 
@@ -150,3 +150,4 @@ const PlansSection: React.FC<{ t: any }> = ({ t }) => {
 };
 
 export default PlansSection;
+
