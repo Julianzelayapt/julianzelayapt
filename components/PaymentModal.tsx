@@ -71,8 +71,9 @@ const PaymentModal: React.FC<PaymentModalProps> = ({ isOpen, onClose, planName, 
                   className="group relative flex items-center justify-center w-full h-[64px] rounded-full bg-[#ffc43b] hover:bg-[#f2ba36] transition-all transform active:scale-[0.98] px-6 shadow-sm"
                 >
                   <img
-                    src="https://res.cloudinary.com/deb7eunq3/image/upload/v1769834501/paypal-logo_a7weld.webp"
+                    src="https://res.cloudinary.com/deb7eunq3/image/upload/f_auto,q_auto/v1769834501/paypal-logo_a7weld.webp"
                     alt="PayPal"
+                    loading="lazy"
                     className="h-10 w-auto object-contain pointer-events-none"
                   />
                 </a>
@@ -85,8 +86,9 @@ const PaymentModal: React.FC<PaymentModalProps> = ({ isOpen, onClose, planName, 
                   className="group relative flex items-center justify-center w-full h-[64px] rounded-full bg-white border-2 border-[#00B1EA] hover:bg-gray-50 transition-all transform active:scale-[0.98] shadow-sm px-6"
                 >
                   <img
-                    src="https://res.cloudinary.com/deb7eunq3/image/upload/v1769833551/MercadoPago-Logo-Vector.svg-_zuvfgi.webp"
+                    src="https://res.cloudinary.com/deb7eunq3/image/upload/f_auto,q_auto/v1769833551/MercadoPago-Logo-Vector.svg-_zuvfgi.webp"
                     alt="Mercado Pago"
+                    loading="lazy"
                     className="h-10 w-auto object-contain pointer-events-none"
                   />
                 </a>
@@ -105,3 +107,4 @@ const PaymentModal: React.FC<PaymentModalProps> = ({ isOpen, onClose, planName, 
 };
 
 export default PaymentModal;
+
