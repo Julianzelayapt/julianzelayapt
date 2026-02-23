@@ -79,9 +79,10 @@ const CoachingSection: React.FC<{ t: any }> = ({ t }) => {
               <div className="relative group">
                 <div className="bg-[var(--section-bg-alt)] p-3 rounded-[40px] ios-shadow border-4 border-[var(--card-bg)] transition-all duration-700">
                   <img
-                    src="https://res.cloudinary.com/deb7eunq3/image/upload/v1769451980/yo_y_papa_a7aixs.webp"
+                    src="https://res.cloudinary.com/deb7eunq3/image/upload/f_auto,q_auto/v1769451980/yo_y_papa_a7aixs.webp"
                     alt="Coaching Julian"
-                    className="rounded-[30px] w-full aspect-[4/5] object-cover group-hover:scale-105 transition-transform duration-700"
+                    loading="lazy"
+                    className="rounded-[30px] w-full aspect-[4/5] object-cover group-hover:scale-110 transition-transform duration-700"
                   />
                 </div>
               </div>
