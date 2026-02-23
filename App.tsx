@@ -184,30 +184,26 @@ const App: React.FC = () => {
                         className="flex-shrink-0 p-3 md:p-5"
                         style={{ width: `${100 / totalItems}%` }}
                       >
-                        <div className="bg-[var(--card-bg)] p-6 md:p-10 rounded-[40px] border border-[var(--card-border)] shadow-[0_10px_40px_-15px_rgba(0,0,0,0.3)] dark:shadow-[0_10px_40px_-15px_rgba(0,0,0,0.6)] h-full flex flex-col transition-colors duration-500">
-                          <div className="aspect-[4/5] rounded-[24px] overflow-hidden mb-8 shadow-md">
+                        <div className="bg-[var(--card-bg)] p-4 md:p-6 rounded-[24px] md:rounded-[40px] border border-[var(--card-border)] shadow-[0_10px_40px_-15px_rgba(0,0,0,0.3)] dark:shadow-[0_10px_40px_-15px_rgba(0,0,0,0.6)] h-full flex flex-col transition-colors duration-500">
+                          <div className="aspect-[4/5] rounded-[16px] md:rounded-[24px] overflow-hidden mb-4 shadow-md">
                             <img
                               src={testimonial.image}
                               className="w-full h-full object-cover"
                               alt={testimonial.name}
                             />
                           </div>
-                          <div className="flex-1 space-y-4">
-                            <div className="space-y-1">
-                              <p className="text-[10px] md:text-[11px] uppercase tracking-[0.2em] font-black text-kaki-600">
+                          <div className="flex-1 space-y-3">
+                            <div className="space-y-0.5">
+                              <p className="text-[9px] md:text-[10px] uppercase tracking-[0.2em] font-black text-kaki-600">
                                 {(t as any)[traKey]}
                               </p>
-                              <h4 className="text-3xl md:text-4xl font-black text-[var(--ios-text)] tracking-tight uppercase">
+                              <h4 className="text-xl md:text-2xl font-black text-[var(--ios-text)] tracking-tight uppercase">
                                 {testimonial.name}
                               </h4>
                             </div>
-                            <p className="text-[var(--ios-text)]/80 text-base md:text-lg leading-relaxed font-medium italic">
+                            <p className="text-[var(--ios-text)]/80 text-sm md:text-[15px] leading-snug font-medium italic line-clamp-3 md:line-clamp-4">
                               {(t as any)[quoKey]}
                             </p>
-                          </div>
-                          <div className="pt-8 flex items-center gap-4 opacity-10">
-                            <div className="h-[1px] flex-1 bg-ios-text" />
-                            <span className="text-[9px] font-black uppercase tracking-[0.4em]">Training Logic</span>
                           </div>
                         </div>
                       </div>
