@@ -199,3 +199,4 @@ export const translations = {
     t6_quo: '"Mi ha cambiato la postura e il gonfiore addominale e sparito subito. Non bisogna mangiare meno, ma allenarsi con intensita e scegliere meglio. Mi vedo molto piu soda e con una fiducia incredibile."',
   }
 };
+
