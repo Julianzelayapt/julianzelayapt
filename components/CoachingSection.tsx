@@ -96,3 +96,4 @@ const CoachingSection: React.FC<{ t: any }> = ({ t }) => {
 };
 
 export default CoachingSection;
+
