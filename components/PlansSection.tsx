@@ -88,24 +88,24 @@ const PlansSection: React.FC<{ t: any }> = ({ t }) => {
   ];
 
   return (
-    <section id="plans" className="py-16 px-6 bg-[var(--ios-bg)] overflow-hidden relative transition-colors duration-500">
+    <section id="plans" className="py-8 px-6 bg-[var(--ios-bg)] overflow-hidden relative transition-colors duration-500">
       <div className="max-w-7xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.4 }}
-          className="text-center mb-16"
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          className="text-center mb-10"
         >
           <h2 className="text-4xl md:text-7xl font-black text-[var(--ios-text)] mb-4 tracking-tighter uppercase leading-none">{t.plans_title}</h2>
         </motion.div>
 
-        <div className="mb-16">
+        <div className="mb-12">
           <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="flex items-center gap-4 mb-10"
+            className="flex items-center gap-4 mb-8"
           >
             <div className="h-px flex-grow bg-[var(--ios-text)]/5"></div>
             <h3 className="text-[10px] font-black uppercase tracking-[0.4em] text-kaki-500">{t.gymbro}</h3>
@@ -120,10 +120,10 @@ const PlansSection: React.FC<{ t: any }> = ({ t }) => {
 
         <div>
           <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="flex items-center gap-4 mb-10"
+            className="flex items-center gap-4 mb-8"
           >
             <div className="h-px flex-grow bg-[var(--ios-text)]/5"></div>
             <h3 className="text-[10px] font-black uppercase tracking-[0.4em] text-kaki-500">{t.gymgirl}</h3>
