@@ -96,13 +96,13 @@ const App: React.FC = () => {
         </Suspense>
 
         {/* Testimonios Section */}
-        <section id="testimonios" className="py-12 md:py-24 px-6 bg-[var(--ios-bg)] overflow-hidden transition-colors duration-500">
+        <section id="testimonios" className="py-8 md:py-16 px-6 bg-[var(--ios-bg)] overflow-hidden transition-colors duration-500">
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-center mb-16 md:mb-24"
+              className="text-center mb-10 md:mb-16"
             >
               <h3 className="text-4xl md:text-6xl font-black text-[var(--ios-text)] uppercase tracking-tighter mb-4 px-4">
                 {t.testimonials}
@@ -202,7 +202,7 @@ const App: React.FC = () => {
                                 {testimonial.name}
                               </h4>
                             </div>
-                            <p className="text-[var(--ios-text)]/80 text-sm md:text-[15px] leading-snug font-medium italic line-clamp-3 md:line-clamp-4">
+                            <p className="text-[var(--ios-text)]/80 text-sm md:text-[15px] leading-snug font-medium italic">
                               {(t as any)[quoKey]}
                             </p>
                           </div>
@@ -267,4 +267,3 @@ const App: React.FC = () => {
 };
 
 export default App;
-
