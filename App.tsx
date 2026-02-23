@@ -190,6 +190,7 @@ const App: React.FC = () => {
                               src={testimonial.image}
                               className="w-full h-full object-cover"
                               alt={testimonial.name}
+                              loading="lazy"
                             />
                           </div>
                           <div className="flex-1 space-y-3">
