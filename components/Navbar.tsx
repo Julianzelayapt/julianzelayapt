@@ -44,19 +44,25 @@ const Navbar: React.FC<NavbarProps> = ({ lang, setLang, t, isDarkMode, setIsDark
         <div className="max-w-6xl mx-auto px-6">
           <div className={`ios-blur transition-all duration-300 rounded-full border border-[var(--card-border)] px-6 md:px-8 flex items-center justify-between transition-all duration-300 ${scrolled ? 'ios-shadow py-3' : 'py-4'}`}>
             <div className="flex items-center gap-3 cursor-pointer group z-50 relative" onClick={() => scrollTo('hero')}>
-              <div className="w-9 h-9 bg-[var(--ios-text)] rounded-full flex items-center justify-center text-[var(--ios-bg)] font-black text-[10px] shadow-lg group-hover:scale-110 transition-transform duration-300">JZ</div>
-              <span className="text-[11px] font-black tracking-[0.2em] text-[var(--ios-text)] uppercase hidden sm:block">JULIAN ZELAYA PT</span>
+              <div className="w-9 h-9 flex-shrink-0 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <img
+                  src="/icon.png"
+                  alt="Julian Zelaya PT"
+                  className={`w-9 h-9 object-contain transition-all duration-300 ${isDarkMode ? 'invert' : ''}`}
+                />
+              </div>
+              <span className="font-bold tracking-tight text-[var(--ios-text)] uppercase text-[12px]">JULIAN ZELAYA PT</span>
             </div>
 
             <div className="hidden md:flex items-center space-x-8">
-              <button onClick={() => scrollTo('knowledge')} className="text-[10px] font-black text-[var(--ios-text)] hover:text-kaki-600 transition-colors uppercase tracking-widest hover:scale-105 transform duration-200">{t.nav_method}</button>
-              <button onClick={() => scrollTo('coaching')} className="text-[10px] font-black text-[var(--ios-text)] hover:text-kaki-600 transition-colors uppercase tracking-widest hover:scale-105 transform duration-200">{t.nav_coaching}</button>
-              <button onClick={() => scrollTo('plans')} className="text-[10px] font-black text-[var(--ios-text)] hover:text-kaki-600 transition-colors uppercase tracking-widest hover:scale-105 transform duration-200">{t.nav_plans}</button>
+              <button onClick={() => scrollTo('knowledge')} className="text-[11px] font-black text-[var(--ios-text)] hover:text-kaki-600 transition-colors uppercase tracking-[0.1em] hover:scale-105 transform duration-200">{t.nav_method}</button>
+              <button onClick={() => scrollTo('coaching')} className="text-[11px] font-black text-[var(--ios-text)] hover:text-kaki-600 transition-colors uppercase tracking-[0.1em] hover:scale-105 transform duration-200">{t.nav_coaching}</button>
+              <button onClick={() => scrollTo('plans')} className="text-[11px] font-black text-[var(--ios-text)] hover:text-kaki-600 transition-colors uppercase tracking-[0.1em] hover:scale-105 transform duration-200">{t.nav_plans}</button>
 
-              <div className="flex items-center gap-4 border-l border-black/5 dark:border-white/5 pl-6">
+              <div className="flex items-center gap-4 border-l border-black/10 dark:border-white/10 pl-6">
                 <div className="flex gap-2">
                   {(['es', 'en', 'it'] as const).map(l => (
-                    <button key={l} onClick={() => setLang(l)} className={`text-[9px] font-black uppercase px-3 py-1.5 rounded-full transition-all duration-300 ${lang === l ? 'bg-kaki-100 dark:bg-kaki-900/30 text-kaki-900 dark:text-kaki-100 shadow-sm' : 'text-[var(--ios-text)] hover:bg-black/5 dark:hover:bg-white/5'}`}>
+                    <button key={l} onClick={() => setLang(l)} className={`text-[10px] font-black uppercase px-3 py-1.5 rounded-full transition-all duration-300 ${lang === l ? 'bg-kaki-600 text-white shadow-md' : 'text-[var(--ios-text)] hover:bg-black/5 dark:hover:bg-white/5'}`}>
                       {l}
                     </button>
                   ))}
