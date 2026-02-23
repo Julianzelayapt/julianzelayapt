@@ -43,7 +43,7 @@ const Navbar: React.FC<NavbarProps> = ({ lang, setLang, t, isDarkMode, setIsDark
             <div className="flex items-center gap-3 cursor-pointer group z-50 relative" onClick={() => scrollTo('hero')}>
               <div className="w-10 h-10 flex-shrink-0 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <img
-                  src="/icon.png"
+                  src="/logo.png"
                   alt="Julian Zelaya PT"
                   className="w-10 h-10 object-contain"
                 />
