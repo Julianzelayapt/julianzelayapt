@@ -42,11 +42,11 @@ const Navbar: React.FC<NavbarProps> = ({ lang, setLang, t, isDarkMode, setIsDark
           <div className={`ios-blur transition-all duration-300 rounded-full border border-[var(--card-border)] px-6 md:px-8 flex items-center justify-between transition-all duration-300 ${scrolled ? 'ios-shadow py-3' : 'py-4'}`}>
             <div className="flex items-center gap-3 cursor-pointer group z-50 relative" onClick={() => scrollTo('hero')}>
               <div className="w-10 h-10 flex-shrink-0 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-              <img
+                <img
                   src="/logo.png"
                   alt="Julian Zelaya PT"
                   className={`w-10 h-10 object-contain transition-all duration-300 ${isDarkMode ? 'invert' : ''}`}
-                 />
+                />
               </div>
               <span className="font-bold tracking-tight text-[var(--ios-text)] uppercase text-[12px]">JULIAN ZELAYA PT</span>
             </div>
@@ -54,6 +54,7 @@ const Navbar: React.FC<NavbarProps> = ({ lang, setLang, t, isDarkMode, setIsDark
             <div className="hidden md:flex items-center space-x-8">
               <button onClick={() => scrollTo('knowledge')} className="text-[11px] font-black text-[var(--ios-text)] hover:text-kaki-600 transition-colors uppercase tracking-[0.1em] hover:scale-105 transform duration-200">{t.nav_method}</button>
               <button onClick={() => scrollTo('coaching')} className="text-[11px] font-black text-[var(--ios-text)] hover:text-kaki-600 transition-colors uppercase tracking-[0.1em] hover:scale-105 transform duration-200">{t.nav_coaching}</button>
+              <button onClick={() => scrollTo('guide')} className="text-[11px] font-black text-[var(--ios-text)] hover:text-kaki-600 transition-colors uppercase tracking-[0.1em] hover:scale-105 transform duration-200">{t.nav_guide}</button>
               <button onClick={() => scrollTo('plans')} className="text-[11px] font-black text-[var(--ios-text)] hover:text-kaki-600 transition-colors uppercase tracking-[0.1em] hover:scale-105 transform duration-200">{t.nav_plans}</button>
 
               <div className="flex items-center gap-4 border-l border-black/10 dark:border-white/10 pl-6">
@@ -100,6 +101,7 @@ const Navbar: React.FC<NavbarProps> = ({ lang, setLang, t, isDarkMode, setIsDark
             <div className="flex flex-col gap-8 text-center">
               <button onClick={() => scrollTo('knowledge')} className="text-3xl font-black text-[var(--ios-text)] uppercase">{t.nav_method}</button>
               <button onClick={() => scrollTo('coaching')} className="text-3xl font-black text-[var(--ios-text)] uppercase">{t.nav_coaching}</button>
+              <button onClick={() => scrollTo('guide')} className="text-3xl font-black text-[var(--ios-text)] uppercase">{t.nav_guide}</button>
               <button onClick={() => scrollTo('plans')} className="text-3xl font-black text-[var(--ios-text)] uppercase">{t.nav_plans}</button>
             </div>
           </motion.div>
