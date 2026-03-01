@@ -12,13 +12,13 @@ interface Guide {
 
 const GuideCard: React.FC<{ guide: Guide; t: any; index: number; onSelect: (guide: Guide) => void }> = ({ guide, t, index, onSelect }) => (
     <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-50px" }}
-        transition={{ delay: index * 0.15, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-        whileHover={{ y: -8 }}
+        initial={{ opacity: 0, y: 60, scale: 0.9, rotateY: index === 0 ? -8 : 8 }}
+        whileInView={{ opacity: 1, y: 0, scale: 1, rotateY: 0 }}
+        viewport={{ once: true, margin: "-40px" }}
+        transition={{ delay: index * 0.12, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+        whileHover={{ y: -12, scale: 1.02 }}
         className="relative flex flex-col overflow-hidden group shadow-2xl cursor-pointer w-full rounded-[36px] border border-white/5"
-        style={{ aspectRatio: '3/4' }}
+        style={{ aspectRatio: '3/4', perspective: 1000 }}
     >
         {/* Full-bleed background image */}
         <div className="absolute inset-0 z-0 bg-[#0a0a0a]">
@@ -26,32 +26,36 @@ const GuideCard: React.FC<{ guide: Guide; t: any; index: number; onSelect: (guid
                 src={guide.image}
                 alt={t[guide.nameKey]}
                 loading="lazy"
-                className="w-full h-full object-cover object-top transition-transform duration-1000 group-hover:scale-105"
+                className="w-full h-full object-cover object-top transition-transform duration-1000 group-hover:scale-108"
             />
-            {/* Smooth multi-stop gradient from physique to black text area */}
             <div className="absolute bottom-0 left-0 right-0 h-[55%] bg-gradient-to-t from-black from-30% via-black/70 via-55% to-transparent"></div>
         </div>
 
         {/* Content locked to bottom */}
         <div className="relative z-10 flex flex-col h-full text-white justify-end p-6">
-            <div className="space-y-3 mb-4">
+            <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.12 + 0.25, duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
+                className="space-y-3 mb-4"
+            >
                 <span className="text-[9px] font-black uppercase tracking-[0.5em] text-kaki-400 block">E-Book</span>
                 <h3 className="text-2xl font-black uppercase tracking-tighter leading-tight">{t[guide.nameKey]}</h3>
                 <div className="w-10 h-0.5 bg-kaki-400 rounded-full"></div>
                 <p className="text-[13px] font-medium text-white/90 leading-relaxed italic">
                     {t[guide.descKey]}
                 </p>
-            </div>
+            </motion.div>
 
-            <button
-                onClick={(e) => {
-                    e.stopPropagation();
-                    onSelect(guide);
-                }}
-                className="w-full py-4 rounded-2xl bg-white text-black font-black text-[11px] uppercase tracking-[0.25em] transition-all hover:bg-kaki-500 hover:text-white hover:scale-[1.02] active:scale-95 shadow-xl"
+            <motion.button
+                whileHover={{ scale: 1.04 }}
+                whileTap={{ scale: 0.94 }}
+                onClick={(e) => { e.stopPropagation(); onSelect(guide); }}
+                className="w-full py-4 rounded-2xl bg-white text-black font-black text-[11px] uppercase tracking-[0.25em] transition-all hover:bg-kaki-500 hover:text-white shadow-xl"
             >
                 {t.guide_select}
-            </button>
+            </motion.button>
         </div>
     </motion.div>
 );
@@ -80,15 +84,30 @@ const GuideSection: React.FC<{ t: any }> = ({ t }) => {
         <section id="guide" className="py-24 px-6 bg-[var(--ios-bg)] overflow-hidden relative transition-colors duration-500">
             <div className="max-w-7xl mx-auto">
                 <motion.div
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true, margin: "-100px" }}
-                    transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-80px" }}
+                    transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
                     className="text-center mb-16"
                 >
-                    <span className="text-kaki-500 font-black text-[10px] uppercase tracking-[0.5em] mb-4 block">Alimentación Inteligente</span>
+                    <motion.span
+                        initial={{ opacity: 0, letterSpacing: "0.8em" }}
+                        whileInView={{ opacity: 1, letterSpacing: "0.5em" }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5, delay: 0.08 }}
+                        className="text-kaki-500 font-black text-[10px] uppercase tracking-[0.5em] mb-4 block"
+                    >
+                        Alimentación Inteligente
+                    </motion.span>
                     <h2 className="text-4xl md:text-7xl font-black text-[var(--ios-text)] mb-6 tracking-tighter uppercase leading-none">{t.guide_title}</h2>
-                    <div className="h-1 w-20 bg-kaki-600 mx-auto rounded-full"></div>
+                    <motion.div
+                        initial={{ scaleX: 0 }}
+                        whileInView={{ scaleX: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.45, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+                        style={{ originX: 0.5 }}
+                        className="h-1 w-20 bg-kaki-600 mx-auto rounded-full"
+                    />
                 </motion.div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">

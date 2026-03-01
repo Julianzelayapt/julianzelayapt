@@ -12,14 +12,15 @@ interface Plan {
 
 const PlanCard: React.FC<{ plan: Plan; t: any; index: number; onSelect: (plan: Plan) => void }> = ({ plan, t, index, onSelect }) => (
   <motion.div
-    initial={{ opacity: 0, y: 20 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true, margin: "-50px" }}
-    transition={{ delay: index * 0.05, duration: 0.4 }}
-    whileHover={{ y: -10 }}
+    initial={{ opacity: 0, y: 50, scale: 0.9 }}
+    whileInView={{ opacity: 1, y: 0, scale: 1 }}
+    viewport={{ once: true, margin: "-40px" }}
+    transition={{ delay: index * 0.08, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+    whileHover={{ y: -12, scale: 1.02 }}
+    whileTap={{ scale: 0.97 }}
     className="relative flex flex-col p-10 rounded-[32px] border border-black/[0.02] overflow-hidden group h-[400px] shadow-lg cursor-pointer max-w-sm mx-auto w-full"
   >
-    {/* Background Image Overlay */}
+    {/* Background Image */}
     <div className="absolute inset-0 z-0">
       <img src={plan.image} alt={t[plan.nameKey]} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
       <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
@@ -28,17 +29,17 @@ const PlanCard: React.FC<{ plan: Plan; t: any; index: number; onSelect: (plan: P
     <div className="relative z-10 flex flex-col h-full text-white">
       <h3 className="text-2xl font-black uppercase tracking-tighter leading-tight mb-2">{t[plan.nameKey]}</h3>
       <div className="w-12 h-0.5 bg-kaki-400 mb-auto transition-all duration-300 group-hover:w-20"></div>
-
       <p className="text-base font-medium text-white/90 mb-8 leading-relaxed italic drop-shadow-md">
         {t[plan.descKey]}
       </p>
-
-      <button
+      <motion.button
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.93 }}
         onClick={() => onSelect(plan)}
-        className="w-full py-4 rounded-ios bg-white text-black font-black text-[11px] uppercase tracking-[0.2em] text-center transition-all hover:bg-kaki-500 hover:text-white hover:scale-105 active:scale-95 shadow-xl shadow-white/10"
+        className="w-full py-4 rounded-ios bg-white text-black font-black text-[11px] uppercase tracking-[0.2em] text-center transition-all hover:bg-kaki-500 hover:text-white shadow-xl shadow-white/10"
       >
         {t.select}
-      </button>
+      </motion.button>
     </div>
   </motion.div>
 );
@@ -47,54 +48,25 @@ const PlansSection: React.FC<{ t: any }> = ({ t }) => {
   const [selectedPlan, setSelectedPlan] = useState<Plan | null>(null);
 
   const gymbroPlans: Plan[] = [
-    {
-      nameKey: "plan_ppl",
-      descKey: "desc_ppl",
-      link: "https://www.paypal.com/ncp/payment/M6YAGQUPCY2PA",
-      mpLink: "https://mpago.la/1ApBxuh",
-      image: "https://res.cloudinary.com/deb7eunq3/image/upload/f_auto,q_auto/v1769451981/pplxul_shaubl.webp"
-    },
-    {
-      nameKey: "plan_fullbody",
-      descKey: "desc_fullbody",
-      link: "https://www.paypal.com/ncp/payment/M6YAGQUPCY2PA",
-      mpLink: "https://mpago.la/1DMb5Eg",
-      image: "https://res.cloudinary.com/deb7eunq3/image/upload/f_auto,q_auto/v1769451980/full_body_gfbxzm.webp"
-    },
-    {
-      nameKey: "plan_ul",
-      descKey: "desc_ul",
-      link: "https://www.paypal.com/ncp/payment/BFTQR6PV7L7XQ",
-      mpLink: "https://mpago.la/31khfXn",
-      image: "https://res.cloudinary.com/deb7eunq3/image/upload/f_auto,q_auto/v1769451980/upper_lower_d17ult.webp"
-    }
+    { nameKey: "plan_ppl", descKey: "desc_ppl", link: "https://www.paypal.com/ncp/payment/M6YAGQUPCY2PA", mpLink: "https://mpago.la/1ApBxuh", image: "https://res.cloudinary.com/deb7eunq3/image/upload/f_auto,q_auto/v1769451981/pplxul_shaubl.webp" },
+    { nameKey: "plan_fullbody", descKey: "desc_fullbody", link: "https://www.paypal.com/ncp/payment/M6YAGQUPCY2PA", mpLink: "https://mpago.la/1DMb5Eg", image: "https://res.cloudinary.com/deb7eunq3/image/upload/f_auto,q_auto/v1769451980/full_body_gfbxzm.webp" },
+    { nameKey: "plan_ul", descKey: "desc_ul", link: "https://www.paypal.com/ncp/payment/BFTQR6PV7L7XQ", mpLink: "https://mpago.la/31khfXn", image: "https://res.cloudinary.com/deb7eunq3/image/upload/f_auto,q_auto/v1769451980/upper_lower_d17ult.webp" }
   ];
 
   const gymgirlPlans: Plan[] = [
-    {
-      nameKey: "plan_grow",
-      descKey: "desc_grow",
-      link: "https://www.paypal.com/ncp/payment/XGVFNANY8S8T6",
-      mpLink: "https://mpago.la/2BtQ6E6",
-      image: "https://res.cloudinary.com/deb7eunq3/image/upload/f_auto,q_auto/v1769451980/grow_e_glow_ypkbzi.webp"
-    },
-    {
-      nameKey: "plan_fullbody",
-      descKey: "desc_fullbody",
-      link: "https://www.paypal.com/ncp/payment/8HQQDXRDUTZYN",
-      mpLink: "https://mpago.la/1EDh3kB",
-      image: "https://res.cloudinary.com/deb7eunq3/image/upload/f_auto,q_auto/v1769451979/full_body_gymgirl_diimqx.webp"
-    }
+    { nameKey: "plan_grow", descKey: "desc_grow", link: "https://www.paypal.com/ncp/payment/XGVFNANY8S8T6", mpLink: "https://mpago.la/2BtQ6E6", image: "https://res.cloudinary.com/deb7eunq3/image/upload/f_auto,q_auto/v1769451980/grow_e_glow_ypkbzi.webp" },
+    { nameKey: "plan_fullbody", descKey: "desc_fullbody", link: "https://www.paypal.com/ncp/payment/8HQQDXRDUTZYN", mpLink: "https://mpago.la/1EDh3kB", image: "https://res.cloudinary.com/deb7eunq3/image/upload/f_auto,q_auto/v1769451979/full_body_gymgirl_diimqx.webp" }
   ];
 
   return (
     <section id="plans" className="py-8 px-6 bg-[var(--ios-bg)] overflow-hidden relative transition-colors duration-500">
       <div className="max-w-7xl mx-auto">
+
         <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
           className="text-center mb-10"
         >
           <h2 className="text-4xl md:text-7xl font-black text-[var(--ios-text)] mb-4 tracking-tighter uppercase leading-none">{t.plans_title}</h2>
@@ -102,9 +74,11 @@ const PlansSection: React.FC<{ t: any }> = ({ t }) => {
 
         <div className="mb-12">
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, scaleX: 0 }}
+            whileInView={{ opacity: 1, scaleX: 1 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
+            style={{ originX: 0 }}
             className="flex items-center gap-4 mb-8"
           >
             <div className="h-px flex-grow bg-[var(--ios-text)]/5"></div>
@@ -120,9 +94,11 @@ const PlansSection: React.FC<{ t: any }> = ({ t }) => {
 
         <div>
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, scaleX: 0 }}
+            whileInView={{ opacity: 1, scaleX: 1 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
+            style={{ originX: 1 }}
             className="flex items-center gap-4 mb-8"
           >
             <div className="h-px flex-grow bg-[var(--ios-text)]/5"></div>
@@ -150,4 +126,3 @@ const PlansSection: React.FC<{ t: any }> = ({ t }) => {
 };
 
 export default PlansSection;
-

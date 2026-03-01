@@ -15,51 +15,75 @@ const KnowledgeSection: React.FC<{ t: any }> = ({ t }) => {
   ];
 
   const container = {
-    hidden: { opacity: 0 },
+    hidden: {},
     show: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2
-      }
+      transition: { staggerChildren: 0.1, delayChildren: 0.05 }
     }
   };
 
-  const itemAnim = {
-    hidden: { opacity: 0, y: 30 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+  const cardAnim = {
+    hidden: { opacity: 0, y: 50, scale: 0.93, rotateX: 8 },
+    show: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      rotateX: 0,
+      transition: { duration: 0.55, ease: [0.16, 1, 0.3, 1] }
+    }
   };
 
   return (
     <section id="knowledge" className="pt-4 pb-2 px-6 bg-[var(--ios-bg)] overflow-hidden transition-colors duration-500">
       <div className="max-w-6xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
           className="mb-10"
         >
-          <h2 className="text-4xl md:text-6xl font-black text-[var(--ios-text)] mb-3 tracking-tighter uppercase leading-[0.9]">{t.knowledge_title}</h2>
-          <p className="text-lg text-[var(--ios-gray)] font-medium leading-relaxed max-w-2xl">{t.knowledge_desc}</p>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.45, delay: 0.05, ease: [0.16, 1, 0.3, 1] }}
+            className="text-4xl md:text-6xl font-black text-[var(--ios-text)] mb-3 tracking-tighter uppercase leading-[0.9]"
+          >
+            {t.knowledge_title}
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 14 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.45, delay: 0.12, ease: [0.16, 1, 0.3, 1] }}
+            className="text-lg text-[var(--ios-gray)] font-medium leading-relaxed max-w-2xl"
+          >
+            {t.knowledge_desc}
+          </motion.p>
         </motion.div>
 
         <motion.div
           variants={container}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, margin: "-50px" }}
+          viewport={{ once: true, margin: "-40px" }}
           className="grid md:grid-cols-3 gap-6"
+          style={{ perspective: 1000 }}
         >
           {items.map((item, idx) => (
-            <motion.div key={idx} variants={itemAnim} className="space-y-4">
-              <div className="aspect-[4/5] rounded-[32px] overflow-hidden bg-[var(--section-bg-alt)] border border-[var(--card-border)] ios-shadow group hover-zoom cursor-pointer">
+            <motion.div key={idx} variants={cardAnim} className="space-y-4">
+              <motion.div
+                whileHover={{ y: -8, scale: 1.02 }}
+                transition={{ type: "spring", stiffness: 350, damping: 22 }}
+                className="aspect-[4/5] rounded-[32px] overflow-hidden bg-[var(--section-bg-alt)] border border-[var(--card-border)] ios-shadow group cursor-pointer"
+              >
                 <img
                   src={images[idx]}
-                  className="w-full h-full object-cover transition-all duration-700 contrast-105 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-all duration-600 contrast-105 group-hover:scale-110"
                   alt={item.title}
                   loading="lazy"
                 />
-              </div>
+              </motion.div>
               <div className="px-4">
                 <span className="text-[10px] font-black text-kaki-400 uppercase tracking-[0.25em] mb-1 block">{item.tag}</span>
                 <h3 className="text-2xl font-black text-[var(--ios-text)] mb-2 uppercase tracking-tighter">{item.title}</h3>
@@ -74,4 +98,3 @@ const KnowledgeSection: React.FC<{ t: any }> = ({ t }) => {
 };
 
 export default KnowledgeSection;
-
