@@ -100,17 +100,30 @@ const App: React.FC = () => {
         <section id="testimonios" className="py-8 md:py-16 px-6 bg-[var(--ios-bg)] overflow-hidden transition-colors duration-500">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
               className="text-center mb-10 md:mb-16"
             >
-              <h3 className="text-4xl md:text-6xl font-black text-[var(--ios-text)] uppercase tracking-tighter mb-4 px-4">
+              <motion.h3
+                initial={{ opacity: 0, y: 24, skewY: 2 }}
+                whileInView={{ opacity: 1, y: 0, skewY: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.42, delay: 0.06, ease: [0.16, 1, 0.3, 1] }}
+                className="text-4xl md:text-6xl font-black text-[var(--ios-text)] uppercase tracking-tighter mb-4 px-4"
+              >
                 {t.testimonials}
-              </h3>
-              <p className="text-[var(--ios-text)]/60 text-sm md:text-base max-w-2xl mx-auto font-medium px-6">
+              </motion.h3>
+              <motion.p
+                initial={{ opacity: 0, y: 12 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.38, delay: 0.14, ease: [0.16, 1, 0.3, 1] }}
+                className="text-[var(--ios-text)]/60 text-sm md:text-base max-w-2xl mx-auto font-medium px-6"
+              >
                 {t.testimonials_desc}
-              </p>
+              </motion.p>
             </motion.div>
 
             <div
@@ -175,7 +188,6 @@ const App: React.FC = () => {
                   }}
                 >
                   {TESTIMONIALS.map((testimonial) => {
-                    // Safety check for keys
                     const traKey = `t${testimonial.id}_tra` as keyof typeof t;
                     const quoKey = `t${testimonial.id}_quo` as keyof typeof t;
 
@@ -185,11 +197,19 @@ const App: React.FC = () => {
                         className="flex-shrink-0 p-3 md:p-5"
                         style={{ width: `${100 / totalItems}%` }}
                       >
-                        <div className="bg-[var(--card-bg)] p-4 md:p-6 rounded-[24px] md:rounded-[40px] border border-[var(--card-border)] shadow-[0_10px_40px_-15px_rgba(0,0,0,0.3)] dark:shadow-[0_10px_40px_-15px_rgba(0,0,0,0.6)] h-full flex flex-col transition-colors duration-500">
+                        <motion.div
+                          initial={{ opacity: 0, y: 40, scale: 0.93, rotateX: 6 }}
+                          whileInView={{ opacity: 1, y: 0, scale: 1, rotateX: 0 }}
+                          viewport={{ once: true, margin: "-60px" }}
+                          transition={{ duration: 0.48, delay: testimonial.id * 0.04, ease: [0.16, 1, 0.3, 1] }}
+                          whileHover={{ y: -6, scale: 1.015 }}
+                          className="bg-[var(--card-bg)] p-4 md:p-6 rounded-[24px] md:rounded-[40px] border border-[var(--card-border)] shadow-[0_10px_40px_-15px_rgba(0,0,0,0.3)] dark:shadow-[0_10px_40px_-15px_rgba(0,0,0,0.6)] h-full flex flex-col transition-colors duration-500"
+                          style={{ perspective: 800 }}
+                        >
                           <div className="aspect-[4/5] rounded-[16px] md:rounded-[24px] overflow-hidden mb-4 shadow-md">
                             <img
                               src={testimonial.image}
-                              className="w-full h-full object-cover"
+                              className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                               alt={testimonial.name}
                               loading="lazy"
                             />
@@ -202,12 +222,28 @@ const App: React.FC = () => {
                               <h4 className="text-xl md:text-2xl font-black text-[var(--ios-text)] tracking-tight uppercase">
                                 {testimonial.name}
                               </h4>
+                              <div className="flex gap-0.5 pt-1">
+                                {[...Array(5)].map((_, i) => (
+                                  <motion.svg
+                                    key={i}
+                                    initial={{ opacity: 0, scale: 0, rotate: -20 }}
+                                    whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: testimonial.id * 0.04 + i * 0.06, duration: 0.3, type: "spring", stiffness: 400 }}
+                                    className="w-4 h-4 text-yellow-400"
+                                    viewBox="0 0 20 20"
+                                    fill="currentColor"
+                                  >
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                  </motion.svg>
+                                ))}
+                              </div>
                             </div>
                             <p className="text-[var(--ios-text)]/80 text-sm md:text-[15px] leading-snug font-medium italic">
                               {(t as any)[quoKey]}
                             </p>
                           </div>
-                        </div>
+                        </motion.div>
                       </div>
                     );
                   })}
@@ -246,20 +282,40 @@ const App: React.FC = () => {
 
         <section className="py-24 px-6 text-center bg-ios-text text-white overflow-hidden relative">
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            initial={{ opacity: 0, scale: 0.88, y: 40 }}
+            whileInView={{ opacity: 1, scale: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
             className="max-w-4xl mx-auto relative z-10"
           >
-            <span className="text-kaki-500 font-black text-[9px] uppercase tracking-[0.5em] mb-6 block">Training Logic</span>
-            <h2 className="text-4xl md:text-7xl font-black mb-10 leading-[0.9] tracking-tighter uppercase">{t.cta_title}</h2>
+            <motion.span
+              initial={{ opacity: 0, letterSpacing: "0.8em" }}
+              whileInView={{ opacity: 1, letterSpacing: "0.5em" }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="text-kaki-500 font-black text-[9px] uppercase tracking-[0.5em] mb-6 block"
+            >
+              Training Logic
+            </motion.span>
+            <motion.h2
+              initial={{ opacity: 0, y: 28, skewY: 2 }}
+              whileInView={{ opacity: 1, y: 0, skewY: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.48, delay: 0.12, ease: [0.16, 1, 0.3, 1] }}
+              className="text-4xl md:text-7xl font-black mb-10 leading-[0.9] tracking-tighter uppercase"
+            >
+              {t.cta_title}
+            </motion.h2>
             <motion.a
               href="https://wa.me/393515122826"
               target="_blank"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="inline-block bg-kaki-600 text-white px-12 md:px-16 py-5 md:py-6 rounded-ios font-black text-[10px] uppercase tracking-[0.3em] transition-all shadow-2xl hover:shadow-kaki-600/20"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: 0.24, ease: [0.16, 1, 0.3, 1] }}
+              whileHover={{ scale: 1.07, y: -4 }}
+              whileTap={{ scale: 0.93 }}
+              className="inline-block bg-kaki-600 text-white px-12 md:px-16 py-5 md:py-6 rounded-ios font-black text-[10px] uppercase tracking-[0.3em] transition-all shadow-2xl hover:shadow-kaki-600/30"
             >
               {t.cta_btn}
             </motion.a>
