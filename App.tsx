@@ -10,6 +10,7 @@ import { TESTIMONIALS } from './constants';
 const KnowledgeSection = React.lazy(() => import('./components/KnowledgeSection'));
 const CoachingSection = React.lazy(() => import('./components/CoachingSection'));
 const PlansSection = React.lazy(() => import('./components/PlansSection'));
+const GuideSection = React.lazy(() => import('./components/GuideSection'));
 
 // Loading component
 const SectionLoader = () => (
@@ -237,6 +238,10 @@ const App: React.FC = () => {
 
         <Suspense fallback={<SectionLoader />}>
           <PlansSection t={t} />
+        </Suspense>
+
+        <Suspense fallback={<SectionLoader />}>
+          <GuideSection t={t} />
         </Suspense>
 
         <section className="py-24 px-6 text-center bg-ios-text text-white overflow-hidden relative">
