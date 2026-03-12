@@ -36,7 +36,7 @@ const PlanCard: React.FC<{ plan: Plan; t: any; index: number; onSelect: (plan: P
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.93 }}
         onClick={() => onSelect(plan)}
-        className="w-full py-4 rounded-ios bg-white text-black font-black text-[11px] uppercase tracking-[0.2em] text-center transition-all hover:bg-kaki-500 hover:text-white shadow-xl shadow-white/10"
+        className="w-full py-4 rounded-ios bg-white text-black font-black text-[11px] uppercase tracking-[0.2em] text-center premium-btn shadow-xl shadow-white/10"
       >
         {t.select}
       </motion.button>

@@ -52,7 +52,7 @@ const GuideCard: React.FC<{ guide: Guide; t: any; index: number; onSelect: (guid
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.94 }}
                 onClick={(e) => { e.stopPropagation(); onSelect(guide); }}
-                className="w-full py-4 rounded-2xl bg-white text-black font-black text-[11px] uppercase tracking-[0.25em] transition-all hover:bg-kaki-500 hover:text-white shadow-xl"
+                className="w-full py-4 rounded-2xl bg-white text-black font-black text-[11px] uppercase tracking-[0.25em] premium-btn shadow-xl"
             >
                 {t.guide_select}
             </motion.button>

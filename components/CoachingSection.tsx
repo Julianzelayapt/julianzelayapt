@@ -82,7 +82,7 @@ const CoachingSection: React.FC<{ t: any }> = ({ t }) => {
                     target="_blank"
                     whileHover={{ scale: 1.04 }}
                     whileTap={{ scale: 0.94 }}
-                    className="inline-block w-full text-center bg-kaki-600 text-white py-4 rounded-ios font-black text-[10px] uppercase tracking-widest hover:bg-kaki-700 transition-all shadow-lg shadow-kaki-600/20"
+                    className="inline-block w-full text-center bg-white text-black py-4 rounded-ios font-black text-[10px] uppercase tracking-widest premium-btn shadow-lg shadow-kaki-600/20"
                   >
                     {t.more_info}
                   </motion.a>
@@ -122,7 +122,7 @@ const CoachingSection: React.FC<{ t: any }> = ({ t }) => {
                     target="_blank"
                     whileHover={{ scale: 1.04 }}
                     whileTap={{ scale: 0.94 }}
-                    className="relative z-10 inline-block w-full text-center bg-white text-black py-4 rounded-ios font-black text-[10px] uppercase tracking-widest hover:bg-kaki-100 transition-all shadow-xl"
+                    className="relative z-10 inline-block w-full text-center bg-white text-black py-4 rounded-ios font-black text-[10px] uppercase tracking-widest premium-btn shadow-xl"
                   >
                     {t.more_info}
                   </motion.a>

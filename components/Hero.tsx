@@ -72,7 +72,7 @@ const Hero: React.FC<{ t: any }> = ({ t }) => {
                 whileHover={{ scale: 1.06, y: -3 }}
                 whileTap={{ scale: 0.94 }}
                 onClick={() => scrollTo('coaching')}
-                className="w-full sm:w-[240px] md:w-auto bg-white text-black px-10 md:px-16 py-5 md:py-6 rounded-ios font-black text-[15px] md:text-[16px] uppercase tracking-tighter transition-all duration-300 shadow-2xl"
+                className="w-full sm:w-[240px] md:w-auto bg-white text-black px-10 md:px-16 py-5 md:py-6 rounded-ios font-black text-[15px] md:text-[16px] uppercase tracking-tighter premium-btn shadow-2xl"
               >
                 {t.hero_btn_1}
               </motion.button>
@@ -80,7 +80,7 @@ const Hero: React.FC<{ t: any }> = ({ t }) => {
                 whileHover={{ scale: 1.06, y: -3 }}
                 whileTap={{ scale: 0.94 }}
                 onClick={() => scrollTo('plans')}
-                className="w-full sm:w-[240px] md:w-auto px-10 md:px-16 py-5 md:py-6 rounded-ios font-black text-[15px] md:text-[16px] uppercase tracking-tighter text-white border-2 border-white/30 bg-white/10 backdrop-blur-md hover:bg-white/20 transition-all duration-300 shadow-2xl"
+                className="w-full sm:w-[240px] md:w-auto px-10 md:px-16 py-5 md:py-6 rounded-ios font-black text-[15px] md:text-[16px] uppercase tracking-tighter text-white border-2 border-white/30 bg-white/10 backdrop-blur-md hover:bg-white/20 transition-all duration-300 shadow-2xl hover:border-kaki-500"
               >
                 {t.hero_btn_2}
               </motion.button>
