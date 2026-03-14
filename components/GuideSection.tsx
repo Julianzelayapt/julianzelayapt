@@ -69,7 +69,7 @@ const GuideSection: React.FC<{ t: any }> = ({ t }) => {
             descKey: "guide_cutting_desc",
             link: "https://www.paypal.com/ncp/payment/SAFMKVCXN34NE",
             mpLink: "https://mpago.la/2PUMTjD",
-            image: "https://res.cloudinary.com/deb7eunq3/image/upload/f_auto,q_auto/v1772338921/defi-guide-Editado_jet9yx.webp"
+            image: "https://res.cloudinary.com/deb7eunq3/image/upload/v1773504712/ce4b4b93-e862-4328-b2bf-f582d89b9921_gpksae.webp"
         },
         {
             nameKey: "guide_bulking_name",
