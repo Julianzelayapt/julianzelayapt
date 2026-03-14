@@ -76,7 +76,7 @@ const GuideSection: React.FC<{ t: any }> = ({ t }) => {
             descKey: "guide_bulking_desc",
             link: "https://www.paypal.com/ncp/payment/GH2SE96AX9JRJ",
             mpLink: "https://mpago.la/2EzrGNz",
-            image: "https://res.cloudinary.com/deb7eunq3/image/upload/f_auto,q_auto/v1772345711/Dise%C3%B1o-sin-t%C3%ADtulo_ne7vdq.webp"
+            image: "https://res.cloudinary.com/deb7eunq3/image/upload/v1773490911/Dise%C3%B1o-sin-t%C3%ADtulo_ne7vdq_rjaj5o.webp"
         }
     ];
 
