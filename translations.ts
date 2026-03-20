@@ -26,7 +26,7 @@ export const translations = {
     pack_feature_calls: "Tres videollamadas al mes.",
     pack_feature_support: "Soporte y respuesta a cualquier duda.",
     more_info: "Solicitar asesoria",
-    select: "Empezar hoy",
+    select: "Empieza hoy",
     plans_title: "Planes para Gymbro & Gymgirl",
     gymbro: "Para el Gymbro",
     gymgirl: "Para la Gymgirl",
