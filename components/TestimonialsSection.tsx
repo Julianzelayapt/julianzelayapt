@@ -31,17 +31,9 @@ const TestimonialsSection: React.FC<{ t: any }> = ({ t }) => {
         <div className="hidden md:block absolute inset-y-0 left-0 w-40 bg-gradient-to-r from-[var(--ios-bg)] to-transparent z-10 pointer-events-none" />
         <div className="hidden md:block absolute inset-y-0 right-0 w-40 bg-gradient-to-l from-[var(--ios-bg)] to-transparent z-10 pointer-events-none" />
 
-        <motion.div
-          className="flex gap-4 px-4"
-          animate={{
-            x: ["0%", "-33.333%"]
-          }}
-          transition={{
-            duration: 35,
-            repeat: Infinity,
-            ease: "linear",
-          }}
-          whileHover={{ animationPlayState: 'paused' as any }}
+        <div
+          className="flex gap-4 px-4 animate-marquee"
+          style={{ width: "max-content" }}
         >
           {duplicatedTestimonials.map((testimonial, idx) => {
             const index = testimonial.id;
@@ -86,7 +78,7 @@ const TestimonialsSection: React.FC<{ t: any }> = ({ t }) => {
               </div>
             );
           })}
-        </motion.div>
+        </div>
       </div>
     </section>
   );
