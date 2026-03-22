@@ -86,12 +86,7 @@ const PlanPage: React.FC<PlanPageProps> = ({ t }) => {
                 <div className="mt-12 mb-12">
                    <h3 className="font-bebas text-3xl md:text-5xl text-[var(--ios-text)] tracking-wide uppercase mb-8">{t.details ? "Lo que obtienes:" : "What you get:"}</h3>
                    <div className="grid grid-cols-1 gap-4">
-                      {[
-                        "Rutina detallada día por día.",
-                        "Acceso a todos los ejercicios con indicaciones de técnica.",
-                        "Consejos sobre sobrecarga progresiva adaptados al nivel.",
-                        "Soporte de progresión y métricas clave."
-                      ].map((item, i) => (
+                      {plan.items.map((itemKey, i) => (
                         <motion.div 
                           key={i}
                           initial={{ opacity: 0, x: -10 }}
@@ -100,7 +95,7 @@ const PlanPage: React.FC<PlanPageProps> = ({ t }) => {
                           className="flex items-center gap-4 bg-[var(--card-bg)] p-4 border border-[var(--card-border)] rounded-none group hover:border-[#FFE50C] transition-colors"
                         >
                           <div className="w-2 h-2 bg-[#FFE50C] group-hover:scale-150 transition-transform"></div>
-                          <span className="font-sans text-sm md:text-base uppercase tracking-widest font-bold opacity-80">{item}</span>
+                          <span className="font-sans text-sm md:text-base uppercase tracking-widest font-bold opacity-80">{t[itemKey]}</span>
                         </motion.div>
                       ))}
                    </div>
