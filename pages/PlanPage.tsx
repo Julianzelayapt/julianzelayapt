@@ -17,9 +17,7 @@ const PlanPage: React.FC<PlanPageProps> = ({ t }) => {
   // Scroll to top on mount
   useEffect(() => {
     window.scrollTo(0, 0);
-    if (plan) {
-      document.title = `${t[plan.nameKey]} | Julian Zelaya PT`;
-    }
+    document.title = "Personal Trainer | Online & Presencial | Transformaciones reales | Planes personalizados";
   }, [slug, plan, t]);
 
   if (!plan) {
