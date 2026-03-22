@@ -12,7 +12,6 @@ export const translations = {
     hero_btn_1: "EMPIEZA HOY",
     hero_btn_2: "PLANES Y GUÍAS",
     about_title: "Sobre mí",
-    about_subtitle: "Personal Trainer | Online & Presencial | Transformaciones reales | Planes personalizados",
     about_p1: "Hace más de 4 años empecé a entrenar por mi cuenta, con curiosidad y muchas ganas de entender cómo funciona realmente el cuerpo. Con el tiempo, lo que empezó como algo personal se convirtió en una pasión por aprender y mejorar cada vez más.",
     about_p2: "Durante este camino fui estudiando y aplicando técnicas basadas en estudios y papers cientificos, porque creo que entrenar bien no se trata solo de esforzarse, sino de hacerlo con conocimiento y criterio.",
     about_p3: "Cuento con una certificación CONI, reconocida en todo el territorio europeo, que respalda mi formación y mi compromiso con un entrenamiento serio y responsable.",
