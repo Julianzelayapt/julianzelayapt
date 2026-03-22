@@ -73,9 +73,10 @@ export const translations = {
     level_beginner: "Nivel Principiante",
     level_all: "Todos los Niveles",
     reviews: "Reseñas",
-    desc_ppl_detailed: "Una rutina de Push, Pull y Legs combinada con Upper y Lower Body. Diseñada para lograr la máxima hipertrofia entrenando cada grupo muscular dos veces por semana. Nivel avanzado para quienes buscan un desafío real, balanceando intensidad y volumen.",
+    desc_ppl_detailed: "Una rutina de Push, Pull y Legs combinada con Upper y Lower Body. Diseñada para lograr la máxima hipertrofia entrenando cada grupo muscular dos veces por semana. Para quienes buscan un desafío real, balanceando intensidad y volumen.",
     desc_fullbody_detailed: "Entrena todo el cuerpo en cada sesión. Ideal para maximizar el estímulo muscular frecuente, recuperar mejor y adaptarse a horarios ajustados de forma eficiente y probada científicamente.",
-    desc_ul_detailed: "División clásica y efectiva de Tren Superior e Inferior en 4 días. El equilibrio perfecto entre recuperación y carga pesada para ganar fuerza y músculo sosteniendo el progreso en el tiempo.",
+    desc_ul_detailed: "Es una rutina Upper Lower divide el entrenamiento en dos días de torso superior (Upper) y dos días de tren inferior (Lower), permitiendo trabajar cada grupo muscular dos veces por semana con una excelente relación entre volumen, intensidad y recuperación. La rutina está diseñada específicamente para potenciar la estética en X, priorizando los grupos musculares que generan amplitud y presencia visual.
+",
     desc_grow_detailed: "Programa enfocado en ganancias de tren inferior, con especial énfasis en glúteos y estética general. Desarrolla fuerza y da forma a tu físico de manera inteligente y desafiante.",
     guide_cutting_detailed: "Esta guía está diseñada para acompañar tu proceso de déficit calórico sin perder masa muscular. Incluye información sobre macros, cálculos precisos según tu estilo de vida, ideas de comidas prácticas y estrategias para revelar todo tu detalle muscular manteniendo niveles óptimos de energía.",
     guide_bulking_detailed: "Diseñada para subir de peso y ganar masa muscular de forma limpia («Lean bulk»). Aprende a estructurar tus macros y calorías diarias para potenciar el crecimiento, aprovechando ideas de comidas y técnicas para maximizar progresos sin acumulación excesiva de grasa.",
