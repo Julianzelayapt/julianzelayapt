@@ -43,7 +43,7 @@ export const translations = {
     plan_grow: "NIVEL AVANZADA",
     // Plan Descriptions
     desc_ppl: "Empuje, Tirón y Piernas con Tren Superior e Inferior, entrenando cada grupo muscular dos veces por semana",
-    desc_fullbody: "Se entrena todo el cuerpo cada día, lo que permite una estimulación múltiple de cada grupo muscular",
+    desc_fullbody: "Es una rutina Full Body de 3 días, donde en cada sesión se entrenan todos los grupos musculares, pero con énfasis distinto según el día. La idea principal es estimular cada músculo varias veces por semana, manteniendo un buen equilibrio entre volumen, intensidad y recuperación.",
     desc_ul: "División Tren Superior/Inferior realizada en 4 días, equilibrio perfecto entre recuperación y carga pesada",
     desc_grow: "Especial glúteos y estética. Ganancia de fuerza y forma física",
     testimonials_desc: "Resultados reales basados en ciencia y compromiso. Sin atajos, solo trabajo inteligente.",
