@@ -41,13 +41,13 @@ const PaymentModal: React.FC<PaymentModalProps> = ({ isOpen, onClose, planName, 
               animate={{ scale: 1, opacity: 1, y: 0 }}
               exit={{ scale: 0.9, opacity: 0, y: 20 }}
               onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside
-              className="bg-white w-full max-w-md rounded-none p-8 md:p-14 relative overflow-hidden shadow-2xl border-4 border-black"
+              className="bg-zinc-950 w-full max-w-md rounded-none p-8 md:p-14 relative overflow-hidden shadow-2xl border-4 border-[#FFE50C]/20"
             >
               <button
                 onClick={onClose}
                 className="absolute top-6 right-6 p-2 rounded-none hover:bg-black/5 transition-colors"
               >
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-black/50">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-white/50">
                   <line x1="18" y1="6" x2="6" y2="18"></line>
                   <line x1="6" y1="6" x2="18" y2="18"></line>
                 </svg>
@@ -57,7 +57,7 @@ const PaymentModal: React.FC<PaymentModalProps> = ({ isOpen, onClose, planName, 
                 <span className="text-[12px] font-black uppercase tracking-[0.4em] text-[#FFE50C] mb-4 block">
                   {t.modal_selected}
                 </span>
-                <h3 className="text-4xl md:text-5xl font-bebas text-ios-text uppercase tracking-wide leading-none">
+                <h3 className="text-4xl md:text-5xl font-bebas text-white uppercase tracking-wide leading-none">
                   {planName}
                 </h3>
               </div>
@@ -83,13 +83,13 @@ const PaymentModal: React.FC<PaymentModalProps> = ({ isOpen, onClose, planName, 
                   href={mpLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group relative flex items-center justify-center w-full h-[70px] rounded-none bg-[#00B1EA] hover:bg-[#009ED1] transition-all transform active:scale-[0.98] shadow-sm px-6 premium-btn"
+                  className="group relative flex items-center justify-center w-full h-[70px] rounded-none bg-white hover:bg-[#F0F9FF] border border-zinc-200 transition-all transform active:scale-[0.98] shadow-sm px-6 premium-btn"
                 >
                   <img
                     src="https://res.cloudinary.com/deb7eunq3/image/upload/f_auto,q_auto/v1769833551/MercadoPago-Logo-Vector.svg-_zuvfgi.webp"
                     alt="Mercado Pago"
                     loading="lazy"
-                    className="h-10 w-auto object-contain brightness-0 invert pointer-events-none"
+                    className="h-10 w-auto object-contain pointer-events-none"
                   />
                 </a>
               </div>

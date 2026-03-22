@@ -38,6 +38,16 @@ const KnowledgeSection: React.FC<{ t: any }> = ({ t }) => {
             {t.about_title}
           </motion.h2>
 
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.15 }}
+            className="font-bebas text-xl md:text-2xl text-white/90 uppercase tracking-widest mb-6"
+          >
+            {t.about_subtitle}
+          </motion.div>
+
           <div className="font-sans space-y-7 text-[var(--ios-text)]/70 tracking-wide leading-loose text-base md:text-lg max-w-2xl">
             <motion.p
               initial={{ opacity: 0, y: 20 }}

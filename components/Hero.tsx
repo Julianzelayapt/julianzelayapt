@@ -40,7 +40,7 @@ const Hero: React.FC<{ t: any }> = ({ t }) => {
         </motion.div>
 
         {/* Right Side: Content */}
-        <div className="relative w-full md:w-[52%] h-full flex items-center justify-center md:items-center md:justify-start z-20 px-6 md:px-12 lg:px-20 pt-[35vh] sm:pt-[40vh] md:pt-28">
+        <div className="relative w-full md:w-[52%] h-full flex items-center justify-center md:items-center md:justify-start z-20 px-6 md:px-12 lg:px-20 pt-[25vh] md:pt-20">
           <div className="w-full max-w-xl text-center md:text-left">
 
             {/* Tag line */}
@@ -48,7 +48,7 @@ const Hero: React.FC<{ t: any }> = ({ t }) => {
               initial={{ opacity: 0, y: -16, letterSpacing: "0.6em" }}
               animate={{ opacity: 1, y: 0, letterSpacing: "0.4em" }}
               transition={{ duration: 0.55, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
-              className="font-bebas inline-block text-kaki-400 text-xl md:text-2xl uppercase tracking-[0.3em] mb-5"
+              className="font-bebas inline-block text-[#FFE50C] text-xl md:text-2xl uppercase tracking-[0.3em] mb-4"
             >
               Julian Zelaya · {t.hero_subtitle}
             </motion.span>
@@ -57,7 +57,7 @@ const Hero: React.FC<{ t: any }> = ({ t }) => {
               initial={{ opacity: 0, y: 40, skewY: 3 }}
               animate={{ opacity: 1, y: 0, skewY: 0 }}
               transition={{ duration: 0.65, delay: 0.35, ease: [0.16, 1, 0.3, 1] }}
-              className="font-bebas text-[60px] leading-[0.85] md:text-[90px] lg:text-[130px] md:leading-[0.8] text-white mb-10 md:mb-14 tracking-wide uppercase text-shadow-strong"
+              className="font-bebas text-[54px] leading-[0.85] md:text-[80px] lg:text-[110px] md:leading-[0.8] text-white mb-8 md:mb-12 tracking-wide uppercase text-shadow-strong"
             >
               {t.hero_title}
             </motion.h1>
