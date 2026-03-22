@@ -43,10 +43,10 @@ export const translations = {
     plan_ul: "NIVEL INTERMEDIO",
     plan_grow: "NIVEL AVANZADA",
     // Plan Descriptions
-    desc_ppl: "Empuje, Tirón y Piernas con Tren Superior e Inferior, entrenando cada grupo muscular dos veces por semana",
+    desc_ppl: "Una rutina de Push, Pull y Legs combinada con Upper y Lower Body. Diseñada para lograr la máxima hipertrofia entrenando cada grupo muscular dos veces por semana. Para quienes buscan un desafío real, balanceando intensidad y volumen",
     desc_fullbody: "Es una rutina Full Body de 3 días, donde en cada sesión se entrenan todos los grupos musculares, pero con énfasis distinto según el día. La idea principal es estimular cada músculo varias veces por semana, manteniendo un buen equilibrio entre volumen, intensidad y recuperación.",
     desc_ul: "Es una rutina Upper Lower divide el entrenamiento en dos días de torso superior (Upper) y dos días de tren inferior (Lower), permitiendo trabajar cada grupo muscular dos veces por semana con una excelente relación entre volumen, intensidad y recuperación. La rutina está diseñada específicamente para potenciar la estética en X, priorizando los grupos musculares que generan amplitud y presencia visual.",
-    desc_grow: "Especial glúteos y estética. Ganancia de fuerza y forma física",
+    desc_grow: "Es una rutina de entrenamiento pensada para mujeres que buscan desarrollar glúteos y piernas, tonificar el tren superior sin sobrecargarlo y mejorar la postura para lograr una figura tipo reloj de arena. Combina fuerza, tonificación y estética corporal para ayudarte a verte y sentirte más fuerte, firme y definida, enfocándose en el crecimiento muscular y en resaltar un físico armónico y atractivo",
     testimonials_desc: "Resultados reales basados en ciencia y compromiso. Sin atajos, solo trabajo inteligente.",
     most_popular: "MÁS ELEGIDO",
     modal_selected: "Has seleccionado",
