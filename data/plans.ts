@@ -12,6 +12,7 @@ export interface PlanData {
   link: string;
   mpLink: string;
   image: string;
+  items: string[];
 }
 
 export const allPlans: PlanData[] = [
@@ -27,7 +28,8 @@ export const allPlans: PlanData[] = [
     levelKey: "level_beginner",
     link: "https://www.paypal.com/ncp/payment/M6YAGQUPCY2PA",
     mpLink: "https://mpago.la/1DMb5Eg",
-    image: "https://res.cloudinary.com/deb7eunq3/image/upload/f_auto,q_auto/v1769451980/full_body_gfbxzm.webp"
+    image: "https://res.cloudinary.com/deb7eunq3/image/upload/f_auto,q_auto/v1769451980/full_body_gfbxzm.webp",
+    items: ["item_fullbody_1", "item_fullbody_2", "item_fullbody_3", "item_fullbody_4"]
   },
   {
     id: 'plan-ul',
@@ -40,7 +42,8 @@ export const allPlans: PlanData[] = [
     levelKey: "level_intermediate",
     link: "https://www.paypal.com/ncp/payment/BFTQR6PV7L7XQ",
     mpLink: "https://mpago.la/31khfXn",
-    image: "https://res.cloudinary.com/deb7eunq3/image/upload/f_auto,q_auto/v1769451980/upper_lower_d17ult.webp"
+    image: "https://res.cloudinary.com/deb7eunq3/image/upload/f_auto,q_auto/v1769451980/upper_lower_d17ult.webp",
+    items: ["item_ul_1", "item_ul_2", "item_ul_3", "item_ul_4"]
   },
   {
     id: 'plan-ppl',
@@ -53,7 +56,8 @@ export const allPlans: PlanData[] = [
     levelKey: "level_advanced",
     link: "https://www.paypal.com/ncp/payment/M6YAGQUPCY2PA",
     mpLink: "https://mpago.la/1ApBxuh",
-    image: "https://res.cloudinary.com/deb7eunq3/image/upload/f_auto,q_auto/v1769451981/pplxul_shaubl.webp"
+    image: "https://res.cloudinary.com/deb7eunq3/image/upload/f_auto,q_auto/v1769451981/pplxul_shaubl.webp",
+    items: ["item_ppl_1", "item_ppl_2", "item_ppl_3", "item_ppl_4"]
   },
 
   // GYMGIRL PLANS
@@ -68,7 +72,8 @@ export const allPlans: PlanData[] = [
     levelKey: "level_beginner",
     link: "https://www.paypal.com/ncp/payment/8HQQDXRDUTZYN",
     mpLink: "https://mpago.la/1EDh3kB",
-    image: "https://res.cloudinary.com/deb7eunq3/image/upload/f_auto,q_auto/v1769451979/full_body_gymgirl_diimqx.webp"
+    image: "https://res.cloudinary.com/deb7eunq3/image/upload/f_auto,q_auto/v1769451979/full_body_gymgirl_diimqx.webp",
+    items: ["item_fullbody_girl_1", "item_fullbody_girl_2", "item_fullbody_girl_3", "item_fullbody_girl_4"]
   },
   {
     id: 'plan-grow',
@@ -81,7 +86,8 @@ export const allPlans: PlanData[] = [
     levelKey: "level_advanced",
     link: "https://www.paypal.com/ncp/payment/XGVFNANY8S8T6",
     mpLink: "https://mpago.la/2BtQ6E6",
-    image: "https://res.cloudinary.com/deb7eunq3/image/upload/f_auto,q_auto/v1769451980/grow_e_glow_ypkbzi.webp"
+    image: "https://res.cloudinary.com/deb7eunq3/image/upload/f_auto,q_auto/v1769451980/grow_e_glow_ypkbzi.webp",
+    items: ["item_grow_1", "item_grow_2", "item_grow_3", "item_grow_4"]
   },
 
   // GUIDES
@@ -96,7 +102,8 @@ export const allPlans: PlanData[] = [
     levelKey: "level_all",
     link: "https://www.paypal.com/ncp/payment/SAFMKVCXN34NE",
     mpLink: "https://mpago.la/2PUMTjD",
-    image: "https://res.cloudinary.com/deb7eunq3/image/upload/v1773504712/ce4b4b93-e862-4328-b2bf-f582d89b9921_gpksae.webp"
+    image: "https://res.cloudinary.com/deb7eunq3/image/upload/v1773504712/ce4b4b93-e862-4328-b2bf-f582d89b9921_gpksae.webp",
+    items: ["item_guide_cutting_1", "item_guide_cutting_2", "item_guide_cutting_3", "item_guide_cutting_4"]
   },
   {
     id: 'guide-bulking',
@@ -109,7 +116,8 @@ export const allPlans: PlanData[] = [
     levelKey: "level_all",
     link: "https://www.paypal.com/ncp/payment/GH2SE96AX9JRJ",
     mpLink: "https://mpago.la/2EzrGNz",
-    image: "https://res.cloudinary.com/deb7eunq3/image/upload/v1773490911/Dise%C3%B1o-sin-t%C3%ADtulo_ne7vdq_rjaj5o.webp"
+    image: "https://res.cloudinary.com/deb7eunq3/image/upload/v1773490911/Dise%C3%B1o-sin-t%C3%ADtulo_ne7vdq_rjaj5o.webp",
+    items: ["item_guide_bulking_1", "item_guide_bulking_2", "item_guide_bulking_3", "item_guide_bulking_4"]
   }
 ];
 
