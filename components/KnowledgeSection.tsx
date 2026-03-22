@@ -33,14 +33,14 @@ const KnowledgeSection: React.FC<{ t: any }> = ({ t }) => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-            className="text-4xl md:text-5xl lg:text-6xl font-black text-[var(--ios-text)] mb-8 tracking-tighter uppercase leading-[0.9]"
+            className="font-bebas text-6xl md:text-7xl lg:text-[90px] text-[var(--ios-text)] mb-8 tracking-wide uppercase leading-[0.85]"
           >
             {t.about_title}
           </motion.h2>
 
-          <div className="space-y-5 text-[var(--ios-gray)] font-medium leading-relaxed text-[15px] md:text-lg">
+          <div className="font-sans space-y-7 text-[var(--ios-text)]/70 tracking-wide leading-loose text-base md:text-lg max-w-2xl">
             <motion.p
-              initial={{ opacity: 0, y: 15 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
@@ -82,7 +82,7 @@ const KnowledgeSection: React.FC<{ t: any }> = ({ t }) => {
           transition={{ duration: 0.6, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
           className="w-full lg:w-1/2 flex justify-center lg:justify-end"
         >
-          <div className="relative w-full max-w-md aspect-[4/5] rounded-[32px] overflow-hidden bg-[var(--section-bg-alt)] border border-[var(--card-border)] ios-shadow shadow-2xl group">
+          <div className="relative w-full max-w-md aspect-[4/5] rounded-none overflow-hidden bg-[var(--section-bg-alt)] border border-[var(--card-border)] ios-shadow shadow-2xl group">
             <AnimatePresence mode="popLayout">
               <motion.img
                 key={currentIndex}
@@ -105,7 +105,7 @@ const KnowledgeSection: React.FC<{ t: any }> = ({ t }) => {
                 <button
                   key={i}
                   onClick={() => setCurrentIndex(i)}
-                  className={`h-1.5 rounded-full transition-all duration-500 focus:outline-none ${currentIndex === i ? 'w-8 bg-white/90 shadow' : 'w-2 bg-white/40 hover:bg-white/70'}`}
+                  className={`h-1.5 rounded-none transition-all duration-500 focus:outline-none ${currentIndex === i ? 'w-8 bg-white/90 shadow' : 'w-2 bg-white/40 hover:bg-white/70'}`}
                   aria-label={`Go to image ${i + 1}`}
                 />
               ))}

@@ -1,62 +1,49 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import PaymentModal from './PaymentModal';
+import { allPlans, PlanData } from '../data/plans';
 
-interface Plan {
-  nameKey: string;
-  descKey: string;
-  link: string;
-  mpLink: string;
-  image: string;
-}
+type Plan = PlanData;
 
 const PlanCard: React.FC<{ plan: Plan; t: any; index: number; onSelect: (plan: Plan) => void }> = ({ plan, t, index, onSelect }) => (
   <motion.div
-    initial={{ opacity: 0, y: 50, scale: 0.9 }}
+    initial={{ opacity: 0, y: 50, scale: 0.95 }}
     whileInView={{ opacity: 1, y: 0, scale: 1 }}
     viewport={{ once: true, margin: "-40px" }}
     transition={{ delay: index * 0.08, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-    whileHover={{ y: -12, scale: 1.02 }}
-    whileTap={{ scale: 0.97 }}
-    className="relative flex flex-col p-10 rounded-[32px] border border-black/[0.02] overflow-hidden group h-[400px] shadow-lg cursor-pointer max-w-sm mx-auto w-full"
+    whileHover={{ y: -8, scale: 1.01 }}
+    whileTap={{ scale: 0.98 }}
+    onClick={() => onSelect(plan)}
+    className="relative flex flex-col pt-8 pb-8 px-8 overflow-hidden group h-[480px] cursor-pointer max-w-sm mx-auto w-full bg-[#0a0a0a]"
   >
     {/* Background Image */}
     <div className="absolute inset-0 z-0">
-      <img src={plan.image} alt={t[plan.nameKey]} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+      <img src={plan.image} alt={t[plan.nameKey]} loading="lazy" className="w-full h-full object-cover object-top transition-transform duration-1000 group-hover:scale-105" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
     </div>
 
-    <div className="relative z-10 flex flex-col h-full text-white">
-      <h3 className="text-2xl font-black uppercase tracking-tighter leading-tight mb-2">{t[plan.nameKey]}</h3>
-      <div className="w-12 h-0.5 bg-kaki-400 mb-auto transition-all duration-300 group-hover:w-20"></div>
-      <p className="text-base font-medium text-white/90 mb-8 leading-relaxed italic drop-shadow-md">
-        {t[plan.descKey]}
-      </p>
-      <motion.button
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.93 }}
-        onClick={() => onSelect(plan)}
-        className="w-full py-4 rounded-ios bg-white text-black font-black text-[11px] uppercase tracking-[0.2em] text-center premium-btn shadow-xl shadow-white/10"
-      >
-        {t.select}
-      </motion.button>
+    <div className="flex-grow"></div>
+
+    <div className="relative z-10 flex flex-col justify-end text-white text-left">
+      <h3 className="font-bebas text-5xl md:text-[60px] leading-[0.85] tracking-wide mb-4 text-white drop-shadow-lg uppercase">
+        {t[plan.nameKey]}
+      </h3>
+      <div className="mt-6">
+        <div className="inline-block bg-[#FFE50C] text-black px-6 py-2 font-bebas text-xl md:text-2xl tracking-widest uppercase transition-all duration-300 group-hover:scale-110 shadow-lg premium-btn">
+          {t.add_to_cart || "Empieza ahora"}
+        </div>
+      </div>
     </div>
   </motion.div>
 );
 
 const PlansSection: React.FC<{ t: any }> = ({ t }) => {
   const [selectedPlan, setSelectedPlan] = useState<Plan | null>(null);
+  const navigate = useNavigate();
 
-  const gymbroPlans: Plan[] = [
-    { nameKey: "plan_ppl", descKey: "desc_ppl", link: "https://www.paypal.com/ncp/payment/M6YAGQUPCY2PA", mpLink: "https://mpago.la/1ApBxuh", image: "https://res.cloudinary.com/deb7eunq3/image/upload/f_auto,q_auto/v1769451981/pplxul_shaubl.webp" },
-    { nameKey: "plan_fullbody", descKey: "desc_fullbody", link: "https://www.paypal.com/ncp/payment/M6YAGQUPCY2PA", mpLink: "https://mpago.la/1DMb5Eg", image: "https://res.cloudinary.com/deb7eunq3/image/upload/f_auto,q_auto/v1769451980/full_body_gfbxzm.webp" },
-    { nameKey: "plan_ul", descKey: "desc_ul", link: "https://www.paypal.com/ncp/payment/BFTQR6PV7L7XQ", mpLink: "https://mpago.la/31khfXn", image: "https://res.cloudinary.com/deb7eunq3/image/upload/f_auto,q_auto/v1769451980/upper_lower_d17ult.webp" }
-  ];
-
-  const gymgirlPlans: Plan[] = [
-    { nameKey: "plan_grow", descKey: "desc_grow", link: "https://www.paypal.com/ncp/payment/XGVFNANY8S8T6", mpLink: "https://mpago.la/2BtQ6E6", image: "https://res.cloudinary.com/deb7eunq3/image/upload/f_auto,q_auto/v1769451980/grow_e_glow_ypkbzi.webp" },
-    { nameKey: "plan_fullbody", descKey: "desc_fullbody", link: "https://www.paypal.com/ncp/payment/8HQQDXRDUTZYN", mpLink: "https://mpago.la/1EDh3kB", image: "https://res.cloudinary.com/deb7eunq3/image/upload/f_auto,q_auto/v1769451979/full_body_gymgirl_diimqx.webp" }
-  ];
+  const gymbroPlans = allPlans.filter(p => p.category === 'gymbro');
+  const gymgirlPlans = allPlans.filter(p => p.category === 'gymgirl');
 
   return (
     <section id="plans" className="py-8 px-6 bg-[var(--ios-bg)] overflow-hidden relative transition-colors duration-500">
@@ -69,7 +56,7 @@ const PlansSection: React.FC<{ t: any }> = ({ t }) => {
           transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
           className="text-center mb-10"
         >
-          <h2 className="text-4xl md:text-7xl font-black text-[var(--ios-text)] mb-4 tracking-tighter uppercase leading-none">{t.plans_title}</h2>
+          <h2 className="font-bebas text-6xl md:text-[90px] text-[var(--ios-text)] mb-4 tracking-wide uppercase leading-none drop-shadow-sm">{t.plans_title}</h2>
         </motion.div>
 
         <div className="mb-12">
@@ -82,12 +69,12 @@ const PlansSection: React.FC<{ t: any }> = ({ t }) => {
             className="flex items-center gap-4 mb-8"
           >
             <div className="h-px flex-grow bg-[var(--ios-text)]/5"></div>
-            <h3 className="text-[10px] font-black uppercase tracking-[0.4em] text-kaki-500">{t.gymbro}</h3>
+            <h3 className="text-[10px] font-black uppercase tracking-[0.4em] text-[#FFE50C]">{t.gymbro}</h3>
             <div className="h-px flex-grow bg-[var(--ios-text)]/5"></div>
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {gymbroPlans.map((plan, i) => (
-              <PlanCard key={i} plan={plan} t={t} index={i} onSelect={setSelectedPlan} />
+              <PlanCard key={i} plan={plan} t={t} index={i} onSelect={(p) => navigate(`/plan/${p.slug}`)} />
             ))}
           </div>
         </div>
@@ -102,12 +89,12 @@ const PlansSection: React.FC<{ t: any }> = ({ t }) => {
             className="flex items-center gap-4 mb-8"
           >
             <div className="h-px flex-grow bg-[var(--ios-text)]/5"></div>
-            <h3 className="text-[10px] font-black uppercase tracking-[0.4em] text-kaki-500">{t.gymgirl}</h3>
+            <h3 className="text-[10px] font-black uppercase tracking-[0.4em] text-[#FFE50C]">{t.gymgirl}</h3>
             <div className="h-px flex-grow bg-[var(--ios-text)]/5"></div>
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {gymgirlPlans.map((plan, i) => (
-              <PlanCard key={i} plan={plan} t={t} index={i} onSelect={setSelectedPlan} />
+              <PlanCard key={i} plan={plan} t={t} index={i} onSelect={(p) => navigate(`/plan/${p.slug}`)} />
             ))}
           </div>
         </div>
