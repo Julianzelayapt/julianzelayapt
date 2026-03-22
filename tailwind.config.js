@@ -31,6 +31,7 @@ export default {
             },
             fontFamily: {
                 sans: ['Inter', 'sans-serif'],
+                bebas: ['"Bebas Neue"', 'sans-serif'],
             },
             borderRadius: {
                 'ios': '14px',

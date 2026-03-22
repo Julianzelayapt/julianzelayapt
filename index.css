@@ -3,17 +3,6 @@
 @tailwind utilities;
 
 :root {
-  --ios-bg: #ffffff;
-  --ios-text: #1a1a1c;
-  --ios-gray: #86868b;
-  --ios-blur-bg: rgba(255, 255, 255, 0.75);
-  --ios-blur-bg-strong: rgba(255, 255, 255, 0.8);
-  --card-bg: #ffffff;
-  --card-border: rgba(0, 0, 0, 0.03);
-  --section-bg-alt: #f8faf9;
-}
-
-.dark {
   --ios-bg: #000000;
   --ios-text: #f5f5f7;
   --ios-gray: #a1a1a6;
@@ -21,8 +10,10 @@
   --ios-blur-bg-strong: rgba(30, 30, 30, 0.85);
   --card-bg: #1c1c1e;
   --card-border: rgba(255, 255, 255, 0.05);
+  --vibrant-gold: #FFE50C;
   --section-bg-alt: #121212;
 }
+
 
 @layer base {
   body {
@@ -125,7 +116,7 @@
     background: linear-gradient(
       90deg,
       transparent,
-      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0.7),
       transparent
     );
     transition: left 0.5s ease;
@@ -136,6 +127,6 @@
   }
 
   .premium-btn:hover {
-    @apply shadow-[0_0_20px_rgba(132,154,153,0.4)] scale-[1.02] bg-kaki-500 text-white;
+    @apply shadow-[0_0_20px_rgba(0,0,0,0.1)] scale-[1.01];
   }
 }
