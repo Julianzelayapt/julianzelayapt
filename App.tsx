@@ -41,6 +41,10 @@ const App: React.FC = () => {
   const [lang, setLang] = useState<'es' | 'en' | 'it'>('es');
   const t = translations[lang];
 
+  useEffect(() => {
+    document.title = "Personal Trainer | Online & Presencial | Transformaciones reales | Planes personalizados";
+  }, [lang]);
+
   return (
     <BrowserRouter>
       <ScrollToHash />

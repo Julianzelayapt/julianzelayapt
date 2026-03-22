@@ -129,4 +129,17 @@
   .premium-btn:hover {
     @apply shadow-[0_0_20px_rgba(0,0,0,0.1)] scale-[1.01];
   }
+
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-33.333%); }
+  }
+
+  .animate-marquee {
+    animation: marquee 35s linear infinite;
+  }
+
+  .animate-marquee:hover {
+    animation-play-state: paused;
+  }
 }
