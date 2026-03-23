@@ -73,7 +73,7 @@ export const allPlans: PlanData[] = [
     link: "https://www.paypal.com/ncp/payment/8HQQDXRDUTZYN",
     mpLink: "https://mpago.la/1EDh3kB",
     image: "https://res.cloudinary.com/deb7eunq3/image/upload/f_auto,q_auto/v1769451979/full_body_gymgirl_diimqx.webp",
-    items: ["item_fullbody_girl_1", "item_fullbody_girl_2", "item_fullbody_girl_3", "item_fullbody_girl_4"]
+    items: ["item_fullbody_girl_1", "item_fullbody_girl_2", "item_fullbody_girl_3", "item_fullbody_girl_4", "item_fullbody_girl_5"]
   },
   {
     id: 'plan-grow',
@@ -87,7 +87,7 @@ export const allPlans: PlanData[] = [
     link: "https://www.paypal.com/ncp/payment/XGVFNANY8S8T6",
     mpLink: "https://mpago.la/2BtQ6E6",
     image: "https://res.cloudinary.com/deb7eunq3/image/upload/f_auto,q_auto/v1769451980/grow_e_glow_ypkbzi.webp",
-    items: ["item_grow_1", "item_grow_2", "item_grow_3", "item_grow_4"]
+    items: ["item_grow_1", "item_grow_2", "item_grow_3", "item_grow_4", "item_grow_5"]
   },
 
   // GUIDES
