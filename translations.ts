@@ -84,9 +84,9 @@ export const translations = {
     details: "Ver detalles",
     // Items
     item_fullbody_1: "Rutina detallada día por día.",
-    item_fullbody_2: "Acceso a todos los ejercicios con indicaciones de técnica.",
-    item_fullbody_3: "Consejos sobre sobrecarga progresiva adaptados al nivel.",
-    item_fullbody_4: "Soporte de progresión y métricas clave.",
+    item_fullbody_2: "Acceso a los ejercicios con indicaciones de técnica y videos demostrativos (TODO DENTRO DEL EXCEL DE LA RUTINA).",
+    item_fullbody_3: "Bloques para registrar peso y sobrecarga progresiva.",
+    item_fullbody_4: "Info de como calcular tu %RM en base a la tabla de maximales y el metodo indirecto .",
     item_ul_1: "División superior/inferior optimizada.",
     item_ul_2: "Enfoque en fuerza y carga pesada.",
     item_ul_3: "Gestión de volumen y recuperación.",
