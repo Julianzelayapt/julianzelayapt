@@ -54,7 +54,7 @@ export const allPlans: PlanData[] = [
     descKey: "desc_ppl",
     detailsKey: "desc_ppl_detailed",
     levelKey: "level_advanced",
-    link: "https://www.paypal.com/ncp/payment/M6YAGQUPCY2PA",
+    link: "https://www.paypal.com/ncp/payment/5B4KEDF6BXBRJ",
     mpLink: "https://mpago.la/1ApBxuh",
     image: "https://res.cloudinary.com/deb7eunq3/image/upload/f_auto,q_auto/v1769451981/pplxul_shaubl.webp",
     items: ["item_ppl_1", "item_ppl_2", "item_ppl_3", "item_ppl_4"]
