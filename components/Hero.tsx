@@ -40,7 +40,7 @@ const Hero: React.FC<{ t: any }> = ({ t }) => {
         </motion.div>
 
         {/* Right Side: Content */}
-        <div className="relative w-full md:w-[52%] h-full flex items-center justify-center md:items-center md:justify-start z-20 px-6 md:px-12 lg:px-20 pt-[25vh] md:pt-20">
+        <div className="relative w-full md:w-[52%] h-full flex items-center justify-center md:items-center md:justify-start z-20 px-6 md:px-12 lg:px-20 pt-[25vh] md:pt-28">
           <div className="w-full max-w-xl text-center md:text-left">
 
             {/* Tag line */}
@@ -48,7 +48,7 @@ const Hero: React.FC<{ t: any }> = ({ t }) => {
               initial={{ opacity: 0, y: -16, letterSpacing: "0.6em" }}
               animate={{ opacity: 1, y: 0, letterSpacing: "0.4em" }}
               transition={{ duration: 0.55, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
-              className="font-bebas inline-block text-[#FFE50C] text-xl md:text-2xl uppercase tracking-[0.3em] mb-4"
+              className="font-bebas inline-block text-[#FFE50C] text-lg md:text-xl uppercase tracking-[0.15em] mb-4"
             >
               Julian Zelaya · {t.hero_subtitle}
             </motion.span>
@@ -57,7 +57,7 @@ const Hero: React.FC<{ t: any }> = ({ t }) => {
               initial={{ opacity: 0, y: 40, skewY: 3 }}
               animate={{ opacity: 1, y: 0, skewY: 0 }}
               transition={{ duration: 0.65, delay: 0.35, ease: [0.16, 1, 0.3, 1] }}
-              className="font-bebas text-[54px] leading-[0.85] md:text-[80px] lg:text-[110px] md:leading-[0.8] text-white mb-8 md:mb-12 tracking-wide uppercase text-shadow-strong"
+              className="font-bebas text-[54px] leading-[0.85] md:text-[68px] lg:text-[90px] md:leading-[0.8] text-white mb-8 md:mb-12 tracking-wide uppercase text-shadow-strong"
             >
               {t.hero_title}
             </motion.h1>
@@ -72,7 +72,7 @@ const Hero: React.FC<{ t: any }> = ({ t }) => {
                 whileHover={{ scale: 1.06, y: -3 }}
                 whileTap={{ scale: 0.94 }}
                 onClick={() => scrollTo('coaching')}
-                className="font-bebas w-full sm:w-[240px] md:w-auto bg-white text-black px-10 md:px-16 py-4 md:py-5 rounded-ios text-2xl md:text-3xl uppercase tracking-wide premium-btn shadow-2xl translate-y-1"
+                className="font-bebas w-full sm:w-auto bg-[#FFE50C] text-black px-8 md:px-12 py-3 md:py-4 rounded-ios text-xl md:text-2xl uppercase tracking-wide premium-btn shadow-2xl"
               >
                 {t.hero_btn_1}
               </motion.button>
@@ -80,7 +80,7 @@ const Hero: React.FC<{ t: any }> = ({ t }) => {
                 whileHover={{ scale: 1.06, y: -3 }}
                 whileTap={{ scale: 0.94 }}
                 onClick={() => scrollTo('plans')}
-                className="font-bebas w-full sm:w-[240px] md:w-auto px-10 md:px-16 py-4 md:py-5 rounded-ios text-2xl md:text-3xl uppercase tracking-wide text-white border-2 border-white/30 bg-white/10 backdrop-blur-md hover:bg-white/20 transition-all duration-300 shadow-2xl hover:border-kaki-500 translate-y-1"
+                className="font-bebas w-full sm:w-auto px-8 md:px-12 py-3 md:py-4 rounded-ios text-xl md:text-2xl uppercase tracking-wide text-white border-2 border-white/30 bg-white/10 backdrop-blur-md hover:bg-white/20 transition-all duration-300 shadow-2xl hover:border-[#FFE50C]"
               >
                 {t.hero_btn_2}
               </motion.button>

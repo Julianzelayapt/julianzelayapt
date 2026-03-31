@@ -73,16 +73,6 @@ const Navbar: React.FC<NavbarProps> = ({ lang, setLang, t }) => {
               <button onClick={() => scrollTo('plans')} className={`font-bebas text-xl md:text-2xl hover:text-[#FFE50C] transition-colors uppercase tracking-wide hover:scale-105 transform duration-200 ${!isScrolled ? 'text-white' : 'text-[var(--ios-text)]'}`}>{t.nav_plans}</button>
               <button onClick={() => scrollTo('guide')} className={`font-bebas text-xl md:text-2xl hover:text-[#FFE50C] transition-colors uppercase tracking-wide hover:scale-105 transform duration-200 ${!isScrolled ? 'text-white' : 'text-[var(--ios-text)]'}`}>{t.nav_guide}</button>
 
-              <div className={`flex items-center gap-4 border-l pl-6 transition-colors duration-300 ${!isScrolled ? 'border-white/20' : 'border-black/10 dark:border-white/10'}`}>
-                <div className="flex gap-2">
-                  {(['es', 'en', 'it'] as const).map(l => (
-                    <button key={l} onClick={() => setLang(l)} className={`font-bebas text-lg uppercase px-3 py-1.5 rounded-none transition-all duration-300 ${lang === l ? 'bg-[#FFE50C] text-black shadow-md' : (!isScrolled ? 'text-white hover:bg-white/10' : 'text-[var(--ios-text)] hover:bg-black/5 dark:hover:bg-white/5')}`}>
-                      {l}
-                    </button>
-                  ))}
-                </div>
-
-              </div>
             </div>
 
             <div className="md:hidden flex items-center gap-4 z-50 relative">
@@ -110,22 +100,6 @@ const Navbar: React.FC<NavbarProps> = ({ lang, setLang, t }) => {
               <button onClick={() => scrollTo('plans')} className="text-3xl font-black text-[var(--ios-text)] uppercase">{t.nav_plans}</button>
               <button onClick={() => scrollTo('guide')} className="text-3xl font-black text-[var(--ios-text)] uppercase">{t.nav_guide}</button>
 
-              <div className="w-20 h-0.5 bg-[var(--ios-text)]/20 mx-auto rounded-full my-4"></div>
-
-              <div className="flex flex-col items-center gap-6">
-                <div className="flex bg-[var(--ios-text)]/5 rounded-full p-1">
-                  {(['es', 'en', 'it'] as const).map(l => (
-                    <button
-                      key={l}
-                      onClick={() => setLang(l)}
-                      className={`w-14 text-[12px] font-black uppercase py-3 rounded-none transition-all duration-300 ${lang === l ? 'bg-[#FFE50C] text-black shadow-md' : 'text-[var(--ios-text)]'}`}
-                    >
-                      {l}
-                    </button>
-                  ))}
-                </div>
-
-              </div>
             </div>
           </motion.div>
         )}
