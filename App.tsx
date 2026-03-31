@@ -48,7 +48,7 @@ const LanguageSplash: React.FC<{ onSelect: (l: 'es' | 'en' | 'it') => void }> = 
       <div className="absolute inset-0 z-0 md:hidden">
         <video autoPlay loop muted playsInline onCanPlayThrough={() => setVideoLoaded(true)}
           className={`w-full h-full object-cover object-[50%_12%] transition-opacity duration-1000 ${videoLoaded ? 'opacity-75' : 'opacity-0'}`}
-          poster="https://res.cloudinary.com/deb7eunq3/video/upload/v1774975064/hero_final_1_vejb4d_1_1_b0ivrn.mp4"
+          poster="https://res.cloudinary.com/deb7eunq3/video/upload/v1774975064/hero_final_1_vejb4d_1_1_b0ivrn.jpg"
         >
           <source src="https://res.cloudinary.com/deb7eunq3/video/upload/f_auto,q_auto:best/v1774975064/hero_final_1_vejb4d_1_1_b0ivrn.mp4" />
         </video>
@@ -61,7 +61,7 @@ const LanguageSplash: React.FC<{ onSelect: (l: 'es' | 'en' | 'it') => void }> = 
         <div className="absolute inset-y-0 left-0 w-[65%] overflow-hidden">
           <video autoPlay loop muted playsInline onCanPlayThrough={() => setVideoLoaded(true)}
             className={`w-full h-full object-cover object-[60%_12%] transition-opacity duration-1000 ${videoLoaded ? 'opacity-100' : 'opacity-0'}`}
-            poster="https://res.cloudinary.com/deb7eunq3/video/upload/v1774975064/hero_final_1_vejb4d_1_1_b0ivrn.mp4"
+            poster="https://res.cloudinary.com/deb7eunq3/video/upload/v1774975064/hero_final_1_vejb4d_1_1_b0ivrn.jpg"
           >
             <source src="https://res.cloudinary.com/deb7eunq3/video/upload/f_auto,q_auto:best/v1774975064/hero_final_1_vejb4d_1_1_b0ivrn.mp4" />
           </video>
