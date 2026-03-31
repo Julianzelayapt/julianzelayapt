@@ -57,7 +57,7 @@ const Hero: React.FC<{ t: any }> = ({ t }) => {
               initial={{ opacity: 0, y: 40, skewY: 3 }}
               animate={{ opacity: 1, y: 0, skewY: 0 }}
               transition={{ duration: 0.65, delay: 0.35, ease: [0.16, 1, 0.3, 1] }}
-              className="font-bebas text-[60px] md:text-[100px] lg:text-[130px] leading-[0.85] md:leading-[0.8] text-white mb-8 md:mb-12 tracking-tight uppercase text-shadow-strong"
+              className="font-bebas text-[70px] md:text-[100px] lg:text-[130px] leading-[0.70] md:leading-[0.8] text-white mb-8 md:mb-12 tracking-tight uppercase text-shadow-strong"
             >
               {t.hero_title}
             </motion.h1>
