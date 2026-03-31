@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense, lazy } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import LandingPage from './pages/LandingPage';
-import PlanPage from './pages/PlanPage';
+const PlanPage = lazy(() => import('./pages/PlanPage'));
 import { translations } from './translations';
 
 import { useLocation } from 'react-router-dom';
@@ -215,8 +215,16 @@ const App: React.FC = () => {
             
             <Routes>
               <Route path="/" element={<LandingPage t={t} />} />
-              <Route path="/plan/:slug" element={<PlanPage t={t} />} />
-              <Route path="/guia/:slug" element={<PlanPage t={t} />} />
+              <Route path="/plan/:slug" element={
+                <Suspense fallback={<div className="min-h-screen flex items-center justify-center bg-black"><div className="w-8 h-8 md:w-12 md:h-12 border-4 border-[#FFE50C]/20 border-t-[#FFE50C] rounded-full animate-spin"></div></div>}>
+                  <PlanPage t={t} />
+                </Suspense>
+              } />
+              <Route path="/guia/:slug" element={
+                <Suspense fallback={<div className="min-h-screen flex items-center justify-center bg-black"><div className="w-8 h-8 md:w-12 md:h-12 border-4 border-[#FFE50C]/20 border-t-[#FFE50C] rounded-full animate-spin"></div></div>}>
+                  <PlanPage t={t} />
+                </Suspense>
+              } />
             </Routes>
 
             <Footer t={t} />

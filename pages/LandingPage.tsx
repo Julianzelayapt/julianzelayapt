@@ -9,7 +9,7 @@ const CoachingSection = React.lazy(() => import('../components/CoachingSection')
 const PlansSection = React.lazy(() => import('../components/PlansSection'));
 const GuideSection = React.lazy(() => import('../components/GuideSection'));
 
-import TestimonialsSection from '../components/TestimonialsSection';
+const TestimonialsSection = React.lazy(() => import('../components/TestimonialsSection'));
 
 const SectionLoader = () => (
   <div className="py-20 flex justify-center items-center">
@@ -30,7 +30,9 @@ const LandingPage: React.FC<LandingPageProps> = ({ t }) => {
         <KnowledgeSection t={t} />
       </Suspense>
 
-      <TestimonialsSection t={t} />
+      <Suspense fallback={<SectionLoader />}>
+        <TestimonialsSection t={t} />
+      </Suspense>
 
       <Suspense fallback={<SectionLoader />}>
         <CoachingSection t={t} />
