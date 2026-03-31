@@ -40,7 +40,7 @@ const Hero: React.FC<{ t: any }> = ({ t }) => {
         </motion.div>
 
         {/* Right Side: Content */}
-        <div className="relative w-full md:w-[52%] h-full flex items-center justify-center md:items-center md:justify-start z-20 px-6 md:px-12 lg:px-20 pt-[25vh] md:pt-28">
+        <div className="relative w-full md:w-[45%] h-full flex items-center justify-center md:justify-end z-20 px-6 md:pl-20 lg:pl-32 pt-[25vh] md:pt-28">
           <div className="w-full max-w-xl text-center md:text-left">
 
             {/* Tag line */}
@@ -57,7 +57,7 @@ const Hero: React.FC<{ t: any }> = ({ t }) => {
               initial={{ opacity: 0, y: 40, skewY: 3 }}
               animate={{ opacity: 1, y: 0, skewY: 0 }}
               transition={{ duration: 0.65, delay: 0.35, ease: [0.16, 1, 0.3, 1] }}
-              className="font-bebas text-[54px] leading-[0.85] md:text-[68px] lg:text-[90px] md:leading-[0.8] text-white mb-8 md:mb-12 tracking-wide uppercase text-shadow-strong"
+              className="font-bebas text-[70px] md:text-[100px] lg:text-[130px] leading-[0.85] md:leading-[0.8] text-white mb-8 md:mb-12 tracking-tight uppercase text-shadow-strong"
             >
               {t.hero_title}
             </motion.h1>
