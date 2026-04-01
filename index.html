@@ -26,9 +26,28 @@
 </head>
 
 <body class="bg-black text-white antialiased overflow-x-hidden">
+  <style>
+    #skeleton {
+      position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+      background-color: black;
+      background-image: url('https://res.cloudinary.com/deb7eunq3/video/upload/so_0,f_auto,q_auto,w_800/v1775008225/SLASH_es1qh5.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0.75;
+      z-index: -1;
+    }
+    #skeleton::after {
+      content: ""; position: absolute; inset: 0;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.4), rgba(0,0,0,0.6));
+    }
+    @media (max-width: 768px) {
+      #skeleton { bottom: auto; height: 70vh; }
+      #skeleton::after { background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.4), black); }
+    }
+  </style>
   <div id="root">
-    <!-- Skeleton loader para matar la pantalla negra -->
-    <div style="position: absolute; inset: 0; background-color: black; background-image: url('https://res.cloudinary.com/deb7eunq3/video/upload/so_0,f_auto,q_auto,w_800/v1775008225/SLASH_es1qh5.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; opacity: 0.75; z-index: -1;"></div>
+    <div id="skeleton"></div>
   </div>
   <script type="module" src="/index.tsx"></script>
 </body>
