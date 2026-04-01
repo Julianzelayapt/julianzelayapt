@@ -47,7 +47,7 @@ const LanguageSplash: React.FC<{ onSelect: (l: 'es' | 'en' | 'it') => void }> = 
       {/* === MOBILE: full-screen video background === */}
       <div className="absolute inset-0 z-0 md:hidden">
         <video autoPlay loop muted playsInline onLoadedData={() => setVideoLoaded(true)}
-          className="w-full h-full object-cover object-[55%_center] opacity-75"
+          className="w-full h-full object-contain object-center opacity-75"
           poster="https://res.cloudinary.com/deb7eunq3/video/upload/so_0,f_auto,q_auto/v1775008225/SLASH_es1qh5.jpg"
         >
           <source src="https://res.cloudinary.com/deb7eunq3/video/upload/v1775008225/SLASH_es1qh5.mp4" type="video/mp4" />
