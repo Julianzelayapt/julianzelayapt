@@ -46,11 +46,11 @@ const LanguageSplash: React.FC<{ onSelect: (l: 'es' | 'en' | 'it') => void }> = 
       
       {/* === MOBILE: full-screen video background === */}
       <div className="absolute inset-0 z-0 md:hidden">
-        <video autoPlay loop muted playsInline onCanPlayThrough={() => setVideoLoaded(true)}
-          className={`w-full h-full object-cover object-[50%_12%] transition-opacity duration-1000 ${videoLoaded ? 'opacity-75' : 'opacity-0'}`}
-          poster="https://res.cloudinary.com/deb7eunq3/video/upload/v1775008225/SLASH_es1qh5.jpg"
+        <video autoPlay loop muted playsInline onLoadedData={() => setVideoLoaded(true)}
+          className="w-full h-full object-cover object-[50%_12%] opacity-75"
+          poster="https://res.cloudinary.com/deb7eunq3/video/upload/so_0,f_auto,q_auto/v1775008225/SLASH_es1qh5.jpg"
         >
-          <source src="https://res.cloudinary.com/deb7eunq3/video/upload/v1775008225/SLASH_es1qh5.mp4" />
+          <source src="https://res.cloudinary.com/deb7eunq3/video/upload/f_auto,q_auto/v1775008225/SLASH_es1qh5.mp4" />
         </video>
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/10 to-black/60"></div>
       </div>
@@ -59,11 +59,11 @@ const LanguageSplash: React.FC<{ onSelect: (l: 'es' | 'en' | 'it') => void }> = 
       <div className="hidden md:block absolute inset-0 z-0">
         {/* Video covers left portion at full height */}
         <div className="absolute inset-y-0 left-0 w-[65%] overflow-hidden">
-          <video autoPlay loop muted playsInline onCanPlayThrough={() => setVideoLoaded(true)}
-            className={`w-full h-full object-cover object-[60%_12%] transition-opacity duration-1000 ${videoLoaded ? 'opacity-100' : 'opacity-0'}`}
-            poster="https://res.cloudinary.com/deb7eunq3/video/upload/v1775008225/SLASH_es1qh5.jpg"
+          <video autoPlay loop muted playsInline onLoadedData={() => setVideoLoaded(true)}
+            className="w-full h-full object-cover object-[60%_12%] opacity-100"
+            poster="https://res.cloudinary.com/deb7eunq3/video/upload/so_0,f_auto,q_auto/v1775008225/SLASH_es1qh5.jpg"
           >
-            <source src="https://res.cloudinary.com/deb7eunq3/video/upload/v1775008225/SLASH_es1qh5.mp4" />
+            <source src="https://res.cloudinary.com/deb7eunq3/video/upload/f_auto,q_auto/v1775008225/SLASH_es1qh5.mp4" />
           </video>
         </div>
         {/* Single full-width gradient that blends video into black — no hard line */}
