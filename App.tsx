@@ -48,9 +48,9 @@ const LanguageSplash: React.FC<{ onSelect: (l: 'es' | 'en' | 'it') => void }> = 
       <div className="absolute top-0 left-0 right-0 h-[70vh] z-0 md:hidden">
         <video autoPlay loop muted playsInline onLoadedData={() => setVideoLoaded(true)}
           className="w-full h-full object-cover object-center opacity-75"
-          poster="https://res.cloudinary.com/deb7eunq3/video/upload/so_0,f_auto,q_auto/v1775008225/SLASH_es1qh5.jpg"
+          poster="https://res.cloudinary.com/deb7eunq3/video/upload/so_0,f_auto,q_auto/v1775011866/0331_1_i7kthk.jpg"
         >
-          <source src="https://res.cloudinary.com/deb7eunq3/video/upload/v1775008225/SLASH_es1qh5.mp4" type="video/mp4" />
+          <source src="https://res.cloudinary.com/deb7eunq3/video/upload/v1775011866/0331_1_i7kthk.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/40 to-black"></div>
       </div>
