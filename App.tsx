@@ -47,7 +47,7 @@ const LanguageSplash: React.FC<{ onSelect: (l: 'es' | 'en' | 'it') => void }> = 
       {/* === MOBILE: full-screen video background === */}
       <div className="absolute inset-0 z-0 md:hidden">
         <video autoPlay loop muted playsInline onLoadedData={() => setVideoLoaded(true)}
-          className="w-full h-full object-cover object-[75%_center] opacity-75"
+          className="w-full h-full object-cover object-[55%_center] opacity-75"
           poster="https://res.cloudinary.com/deb7eunq3/video/upload/so_0,f_auto,q_auto/v1775008225/SLASH_es1qh5.jpg"
         >
           <source src="https://res.cloudinary.com/deb7eunq3/video/upload/v1775008225/SLASH_es1qh5.mp4" type="video/mp4" />
@@ -60,7 +60,7 @@ const LanguageSplash: React.FC<{ onSelect: (l: 'es' | 'en' | 'it') => void }> = 
         {/* Video covers left portion at full height */}
         <div className="absolute inset-y-0 left-0 w-[65%] overflow-hidden">
           <video autoPlay loop muted playsInline onLoadedData={() => setVideoLoaded(true)}
-            className="w-full h-full object-cover object-[70%_center] opacity-100"
+            className="w-full h-full object-cover object-[60%_center] opacity-100"
             poster="https://res.cloudinary.com/deb7eunq3/video/upload/so_0,f_auto,q_auto/v1775008225/SLASH_es1qh5.jpg"
           >
             <source src="https://res.cloudinary.com/deb7eunq3/video/upload/v1775008225/SLASH_es1qh5.mp4" type="video/mp4" />
