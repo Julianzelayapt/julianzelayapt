@@ -33,7 +33,7 @@ const Hero: React.FC<{ t: any }> = ({ t }) => {
               x-webkit-airplay="allow"
               className="w-full h-full object-cover object-[50%_12%] md:object-[50%_10%]"
             >
-              <source src="https://res.cloudinary.com/deb7eunq3/video/upload/f_auto,q_auto,w_1200/v1772297417/hero_final_1_vejb4d.mp4" />
+              <source src="https://res.cloudinary.com/deb7eunq3/video/upload/f_auto,q_auto/v1772297417/hero_final_1_vejb4d.mp4" />
             </video>
             <div className="hidden md:block absolute inset-y-0 right-[-1px] w-48 bg-gradient-to-l from-black via-black/80 to-transparent z-20"></div>
           </div>
