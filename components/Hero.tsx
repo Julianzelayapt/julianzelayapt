@@ -30,6 +30,7 @@ const Hero: React.FC<{ t: any }> = ({ t }) => {
               muted
               playsInline
               className="w-full h-full object-cover object-[50%_12%] md:object-[50%_10%]"
+              poster="https://res.cloudinary.com/deb7eunq3/video/upload/v1772297417/hero_final_1_vejb4d.jpg"
             >
               <source src="https://res.cloudinary.com/deb7eunq3/video/upload/v1772297417/hero_final_1_vejb4d.mp4" />
             </video>
