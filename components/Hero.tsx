@@ -52,7 +52,6 @@ const Hero: React.FC<{ t: any }> = ({ t }) => {
               transition={{ duration: 0.55, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
               className="font-bebas inline-block text-[#FFE50C] text-lg md:text-xl uppercase tracking-[0.15em] mb-4"
             >
-              Julian Zelaya · {t.hero_subtitle}
             </motion.span>
 
             <motion.h1
