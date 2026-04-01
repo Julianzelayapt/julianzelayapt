@@ -148,6 +148,49 @@ const CoachingSection: React.FC<{ t: any }> = ({ t }) => {
               </div>
             </motion.div>
           </div>
+
+          {/* New App Showcase Block */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="mt-16 md:mt-24 pt-16 border-t border-[var(--card-border)]/50"
+          >
+            <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16">
+              <div className="flex-1 text-center md:text-left order-2 md:order-1">
+                <span className="font-bebas text-[#FFE50C] text-lg uppercase tracking-[0.2em] mb-3 block drop-shadow-sm">
+                  {t.app_spotlight_subtitle}
+                </span>
+                <h3 className="font-bebas text-5xl md:text-6xl text-[var(--ios-text)] uppercase tracking-wide leading-[0.9] mb-6">
+                  {t.app_spotlight_title}
+                </h3>
+                <p className="font-sans text-[var(--ios-gray)] text-base md:text-lg mb-8 leading-relaxed max-w-lg mx-auto md:mx-0">
+                  {t.app_spotlight_desc}
+                </p>
+                <ul className="space-y-4 text-left inline-block md:block text-sm md:text-base font-bold text-[var(--ios-gray)] tracking-wide uppercase">
+                  <li className="flex items-center gap-3">
+                    <span className="text-[#FFE50C] text-xl mt-[-2px]">✓</span> {t.app_spotlight_feat1}
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <span className="text-[#FFE50C] text-xl mt-[-2px]">✓</span> {t.app_spotlight_feat2}
+                  </li>
+                </ul>
+              </div>
+              <div className="flex-1 w-full max-w-lg mx-auto order-1 md:order-2">
+                 <div className="relative group p-2 md:p-4 bg-zinc-900/50 border border-zinc-500/20 rounded-none shadow-[0_20px_50px_rgba(0,0,0,0.5)] overflow-hidden transition-all duration-500 hover:border-[#FFE50C]/50">
+                    {/* AQUI VA LA IMAGEN DE LA APP */}
+                    <img
+                      src="https://res.cloudinary.com/deb7eunq3/image/upload/q_auto/f_auto/v1775058965/rutina_y_dieta_ek42vi.webp"
+                      alt="App Experience"
+                      loading="lazy"
+                      className="w-full h-auto object-cover group-hover:scale-[1.02] transition-transform duration-700"
+                    />
+                 </div>
+              </div>
+            </div>
+          </motion.div>
+
         </motion.div>
       </div>
     </section>

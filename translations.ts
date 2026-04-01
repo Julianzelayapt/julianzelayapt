@@ -7,6 +7,7 @@ export const translations = {
     nav_guide: "Guías",
     nav_contact: "Contacto",
     hero_title: "Transforma tu físico Construye disciplina",
+    hero_subtitle: "Personal Trainer",
     hero_desc: "",
     hero_btn_1: "EMPIEZA HOY",
     hero_btn_2: "PLANES Y GUÍAS",
@@ -118,6 +119,12 @@ export const translations = {
     item_guide_bulking_2: "Guía nutricional completa para aprender a comer en superávit sin descontrolarte",
     item_guide_bulking_3: "Estrategias mentales para mantener la disciplina, evitar frustraciones y sostener el enfoque",
     item_guide_bulking_4: "Ebook práctico con educación nutricional y herramientas de organización para hacer el proceso simple y efectivo",
+    // App Spotlight
+    app_spotlight_title: "Tu Progreso en tu Bolsillo",
+    app_spotlight_subtitle: "Plataforma Exclusiva",
+    app_spotlight_desc: "Lleva el control absoluto de tus entrenamientos desde tu celular. Olvídate de los PDFs estáticos para tus rutinas.",
+    app_spotlight_feat1: "Rutinas interactivas con videos y métricas de progresión.",
+    app_spotlight_feat2: "Plan nutricional guiado y estructurado en PDF.",
   },
   en: {
     nav_method: "About Me",
@@ -126,6 +133,7 @@ export const translations = {
     nav_guide: "Guides",
     nav_contact: "Contact",
     hero_title: "Transform your physique Build discipline",
+    hero_subtitle: "Personal Trainer",
     hero_desc: "",
     hero_btn_1: "START TODAY",
     hero_btn_2: "PLANS & GUIDES",
@@ -237,6 +245,12 @@ export const translations = {
     item_guide_bulking_2: "Complete nutritional guide to learn how to eat in a surplus without losing control",
     item_guide_bulking_3: "Mental strategies to maintain discipline, avoid frustration, and sustain focus",
     item_guide_bulking_4: "Practical ebook with nutritional education and organizational tools to make the process simple and effective",
+    // App Spotlight
+    app_spotlight_title: "Your Progress in Your Pocket",
+    app_spotlight_subtitle: "Exclusive Platform",
+    app_spotlight_desc: "Take full control of your workouts from your phone. Forget static PDFs for your exercise routines.",
+    app_spotlight_feat1: "Interactive routines with videos and progression metrics.",
+    app_spotlight_feat2: "Guided and structured nutritional plan in PDF.",
   },
   it: {
     nav_method: "Chi sono",
@@ -245,6 +259,7 @@ export const translations = {
     nav_guide: "Guide Nutrizionali",
     nav_contact: "Contatto",
     hero_title: "Trasforma il tuo fisico Costruisci disciplina",
+    hero_subtitle: "Personal Trainer",
     hero_desc: "",
     hero_btn_1: "INIZIA OGGI",
     hero_btn_2: "PIANI E GUIDE",
@@ -356,5 +371,11 @@ export const translations = {
     item_guide_bulking_2: "Guida nutrizionale completa per imparare a mangiare in surplus senza perdere il controllo",
     item_guide_bulking_3: "Strategie mentali per mantenere la disciplina, evitare frustrazioni e sostenere il focus",
     item_guide_bulking_4: "Ebook pratico con educazione nutrizionale e strumenti organizzativi per un processo semplice ed efficace",
+    // App Spotlight
+    app_spotlight_title: "Il Tuo Progresso in Tasca",
+    app_spotlight_subtitle: "Piattaforma Esclusiva",
+    app_spotlight_desc: "Prendi il controllo totale dei tuoi allenamenti dal tuo telefono. Dimentica i PDF statici per le tue routine.",
+    app_spotlight_feat1: "Routine interattive con video e metriche di progressione.",
+    app_spotlight_feat2: "Piano nutrizionale guidato e strutturato in formato PDF.",
   }
 };
