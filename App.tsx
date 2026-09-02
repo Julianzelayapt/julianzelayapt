@@ -46,10 +46,10 @@ const LanguageSplash: React.FC<{ onSelect: (l: 'es' | 'en' | 'it') => void }> = 
       
       {/* === MOBILE: full-screen video background === */}
       <div className="absolute inset-0 z-0 md:hidden">
-        <video autoPlay loop muted playsInline preload="auto" x-webkit-airplay="allow" onLoadedData={() => setVideoLoaded(true)}
+        <video autoPlay loop muted playsInline preload="auto" poster="https://res.cloudinary.com/deb7eunq3/video/upload/f_auto,q_auto,w_640,so_0/v1788388611/INTRO_AL_CANAL_evnkx7.jpg" x-webkit-airplay="allow" onLoadedData={() => setVideoLoaded(true)}
           className="w-full h-full object-cover object-center opacity-75"
         >
-          <source src="https://res.cloudinary.com/deb7eunq3/video/upload/v1788388611/INTRO_AL_CANAL_evnkx7.mp4" type="video/mp4" />
+          <source src="https://res.cloudinary.com/deb7eunq3/video/upload/f_auto,q_auto:eco,w_640,c_limit/v1788388611/INTRO_AL_CANAL_evnkx7.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/10 to-black/60"></div>
       </div>
@@ -58,10 +58,10 @@ const LanguageSplash: React.FC<{ onSelect: (l: 'es' | 'en' | 'it') => void }> = 
       <div className="hidden md:block absolute inset-0 z-0">
         {/* Video covers left portion at full height */}
         <div className="absolute inset-y-0 left-0 w-[65%] overflow-hidden">
-          <video autoPlay loop muted playsInline preload="auto" x-webkit-airplay="allow" onLoadedData={() => setVideoLoaded(true)}
+          <video autoPlay loop muted playsInline preload="auto" poster="https://res.cloudinary.com/deb7eunq3/video/upload/f_auto,q_auto,w_1280,so_0/v1788388611/INTRO_AL_CANAL_evnkx7.jpg" x-webkit-airplay="allow" onLoadedData={() => setVideoLoaded(true)}
             className="w-full h-full object-cover object-[60%_center] opacity-100"
           >
-            <source src="https://res.cloudinary.com/deb7eunq3/video/upload/v1788388611/INTRO_AL_CANAL_evnkx7.mp4" type="video/mp4" />
+            <source src="https://res.cloudinary.com/deb7eunq3/video/upload/f_auto,q_auto,w_1280,c_limit/v1788388611/INTRO_AL_CANAL_evnkx7.mp4" type="video/mp4" />
           </video>
         </div>
         {/* Single full-width gradient that blends video into black — no hard line */}
