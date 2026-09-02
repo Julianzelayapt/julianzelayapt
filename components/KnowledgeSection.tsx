@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 const KnowledgeSection: React.FC<{ t: any }> = ({ t }) => {
   const images = [
     "https://res.cloudinary.com/deb7eunq3/image/upload/f_auto,q_auto/v1771041444/juli_before_fatl4i.webp",
-    "https://res.cloudinary.com/deb7eunq3/image/upload/f_auto,q_auto/v1771037819/recent_uew5ts.webp",
+    "https://res.cloudinary.com/deb7eunq3/image/upload/v1788372518/IMG_7819-Picsart-AiImageEnhancer_kokrhg.webp",
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
