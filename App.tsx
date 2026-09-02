@@ -49,7 +49,7 @@ const LanguageSplash: React.FC<{ onSelect: (l: 'es' | 'en' | 'it') => void }> = 
         <video autoPlay loop muted playsInline preload="auto" x-webkit-airplay="allow" onLoadedData={() => setVideoLoaded(true)}
           className="w-full h-full object-cover object-center opacity-75"
         >
-          <source src="https://res.cloudinary.com/deb7eunq3/video/upload/v1788388166/intro_al_canal_da_mandare_alin17.mp4" type="video/mp4" />
+          <source src="https://res.cloudinary.com/deb7eunq3/video/upload/v1788388611/INTRO_AL_CANAL_evnkx7.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/10 to-black/60"></div>
       </div>
@@ -61,7 +61,7 @@ const LanguageSplash: React.FC<{ onSelect: (l: 'es' | 'en' | 'it') => void }> = 
           <video autoPlay loop muted playsInline preload="auto" x-webkit-airplay="allow" onLoadedData={() => setVideoLoaded(true)}
             className="w-full h-full object-cover object-[60%_center] opacity-100"
           >
-            <source src="https://res.cloudinary.com/deb7eunq3/video/upload/v1788388166/intro_al_canal_da_mandare_alin17.mp4" type="video/mp4" />
+            <source src="https://res.cloudinary.com/deb7eunq3/video/upload/v1788388611/INTRO_AL_CANAL_evnkx7.mp4" type="video/mp4" />
           </video>
         </div>
         {/* Single full-width gradient that blends video into black — no hard line */}
