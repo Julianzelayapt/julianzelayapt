@@ -42,7 +42,7 @@ export const allPlans: PlanData[] = [
     levelKey: "level_intermediate",
     link: "https://www.paypal.com/ncp/payment/BFTQR6PV7L7XQ",
     mpLink: "https://mpago.la/31khfXn",
-    image: "https://res.cloudinary.com/deb7eunq3/image/upload/v1788374549/IMG_7820_LE_upscale_prime-Modificata_etxrkm.webp",
+    image: "https://res.cloudinary.com/deb7eunq3/image/upload/v1788375068/IMG_7820_LE_upscale_prime-Modificata_etxrkm.webp",
     items: ["item_ul_1", "item_ul_2", "item_ul_3", "item_ul_4"]
   },
   {
